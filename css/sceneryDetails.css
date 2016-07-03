@@ -1,0 +1,175 @@
+@charset "utf-8";
+/* CSS Document */
+/*景点旅游详情*/
+.sceneryImgGudGed{
+	border: 0.1rem solid #FFFFFF;
+	left: 1rem;
+	position: absolute;
+	width:3.5rem;
+	height:3.5rem;
+	border-radius:50%;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+}
+.sceneryImgGudGed img{
+	z-index: 223;
+	border-radius:2.5rem;
+	-webkit-border-radius:2.5rem;
+	-moz-border-radius:2.5rem;
+}
+.nameGenderScenery {
+    margin-left: 5.8rem;
+}
+.guiderCreditScenery {
+    margin-left: 5.6rem;
+}
+.sceneryBgCon{
+	position:absolute;
+	top:11.4rem;
+	left:0.5rem;
+	width:12rem;
+	color:#fff;
+	text-shadow:1px 1px 1px #aaa;
+}
+.sceneryBgConUl{
+	margin:0.3rem 0 0 -0.4rem;
+}
+.sceneryBgConLi{
+	float:left;
+	width:3rem;
+	height:0.8rem;
+	line-height:0.8rem;
+	font-size:0.7rem;
+	text-align:center;
+}
+.sceneryBgConLiBorder{
+	border-left:1px solid #fff;
+	border-right:1px solid #fff;
+}
+.sceneryNav{
+	margin-top:0.4rem;
+	background-color:#fff;
+	height:2rem;
+	line-height:2rem;
+	padding:0 1rem;
+	color:#888;
+}
+.sceneryDays {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #fff;
+	border-top:1px solid #dadada;
+	border-bottom:1px solid #dadada;
+}
+.sceneryDayLi{
+	float:left;
+	padding:0.25rem 0;
+	width:4rem;
+	text-align:center;
+	color:#398ffc;
+	box-shadow:1px 0 1px #dadada;
+}
+.sceneryDayContentUl{
+	margin-bottom:0.4rem;
+	box-shadow:0 1px 1px #aaa;
+}
+.sceneryDayContentLi{
+	background-color:#fff;
+}
+.sceneryMain{
+	position:relative;
+	margin-left:1rem;
+	border-left:1px solid #dadada;
+	padding:0.5rem 0.5rem 0.5rem 0.5rem;
+}
+.sceneryMainTime{
+	margin-left:-1.1rem;
+}
+.sceneryMainTimeImg{
+	float:left;
+	}
+.sceneryMainTimeImg img{
+	width:1.2rem;
+	height:1.2rem;
+}
+.sceneryMainTimeText{
+	float:left;
+	margin-left:0.5rem;
+	color:#398ffc;
+	font-size:0.8rem;
+}
+.sceneryImgContent{
+	margin-top:0.3rem;
+}
+.sceneryImgLeft{
+	float:left;
+}
+.sceneryImgLeft img{
+	width:8rem;
+	height:6rem;
+	border-radius:0.3rem;
+}
+.sceneryContent{
+	margin-left:8.5rem;
+}
+.sceneryContentTitle{
+	height:2rem;
+}
+.sceneryContentTitle .level{
+	margin-left:0.5rem;
+	font-size:0.8rem;
+	color:#999;
+}
+.sceneryContentService{
+	height:1.4rem;
+}
+.sceneryContentService .icon{
+	float:left;
+}
+.sceneryContentService .icon img{
+	position:relative;
+	top:0.15rem;
+	width:1.2rem;
+	height:1.2rem;
+}
+.sceneryContentService .name{
+	float:left;
+	margin-left:0.4rem;
+}
+.sceneryContentServiceConUl{
+	margin-top:0.8rem;
+	margin-left:1.5rem;
+}
+.sceneryContentServiceConLi{
+	float:left;
+	margin-right:0.8rem;
+	font-size:0.8rem;
+}
+.sceneryMainTag{
+	font-size:0.9rem;
+}
+.sceneryMainText{
+	font-size:0.8rem;
+	color:#999;
+	}
+.sceneryNavMoney{
+	text-align:center;
+	}
+.sceneryNavMoneyCon{
+	background-color:#fff;
+	border-top:1px solid #ddd;
+	margin-bottom:0.4rem;
+	padding:0.5rem 0.9rem;
+	font-size:0.8rem;
+}
+.sceneryNavMoneyConNav{
+	color:#358ffc;
+}
+.sceneryNavMoneyUl{
+	color:#999;
+}
+.sceneryNavMoneyLi{
+	margin:0.5rem 0;
+	float:left;
+	width:25%;
+}

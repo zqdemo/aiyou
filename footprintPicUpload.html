@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>上传足迹</title>
+		<link href="css/common.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<style>
+		html,body,.body{
+			height: 100%;
+		}
+		.body .inside{
+			height: 100%;
+			background: url(images/footPrintBj.jpeg) no-repeat top;
+			background-size: auto 100%;
+		}
+			.fileUploadCenter{
+				/*position: relative;*/
+				width:22rem;
+				margin:0rem auto;
+				border-radius: 1rem;
+				-moz-border-radius: 1rem;
+				-webkit-border-radius: 1rem;
+				background:rgba(255,255,255,0.5);
+			}
+			.fileUploadCenter h3{
+				border-radius: 1rem 1rem 0 0;
+				-webkit-border-radius:1rem 1rem 0 0 ;
+				-moz-border-radius:1rem 1rem 0 0 ;
+				background-color:#fff ;
+				position: relative;
+				font-size: 1rem;
+				font-weight: normal;
+				height:3rem;
+				line-height: 3rem;
+				text-align: center;
+			}
+			.fileUploadCenter h3 a{
+				font-size: 0.9rem;
+				position: absolute;
+				right:1rem;	
+			}
+			.fileUploadBox ul{
+				margin-top: 0.5rem;
+			}
+			.fileUploadBox ul li{
+				position: relative;
+				border-radius: 0.5rem;
+				float: left;
+				width:6.33rem;
+				height:6.33rem;
+				margin:0.5rem 0 0.5rem 0.75rem;
+				background-color: #B9B7B8;
+				text-align: center;
+				margin-bottom: 1.5rem;
+			}
+			.fileUploadBox ul li span{
+				color:#888;
+				font-size: 0.9rem;
+				text-align: center;
+				display: block;
+				width:6.33rem;
+				line-height:2rem;
+				position: absolute;
+				bottom: -2rem;
+			}
+			.fileUploadBox ul li a{
+				overflow: hidden;
+				display: block;
+				width:6.33rem;
+				height:6.33rem;
+				position: relative;
+				border-radius:0.5rem;
+				-webkit-border-radius:0.5rem;
+				-moz-border-radius:0.5rem;
+			}
+			.fileUploadBox ul li img{
+				position: absolute;
+				top:50%;
+				left:50%;
+				-webkit-transform: translate(-50%,-50%);
+				transform: translate(-50%,-50%);
+			}
+			.fileUploadBox ul .addFile{
+				background: url(images/plus.png) no-repeat center;
+				background-size:3rem;
+				background-color: #B9B7B8;
+				-webkit-tap-highlight-color:rgba(0,0,0,0);
+			}
+			.hiddenFileUp{
+				display: none;
+				position:relative;
+				top:-5rem;
+				FILTER: alpha(opacity=0);
+				moz-opacity:0; 
+				opacity:0;
+			}
+			.bigPic{
+				display:none;
+				position:fixed;
+				top:0;
+				width:100%;
+				background:#000;
+				height:100%;
+			}
+			.bigPic span{
+				display: table-cell;
+				vertical-align:middle;
+			}
+			.bigPic img{
+				width:100%;
+				height:auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+  			<div class="inside">
+   				<div class="divLeftBack" onclick="pageBack()"></div>
+   				<div class="divCenter">
+    			足迹
+    			</div>
+  			</div>
+		</div>
+		<div class="body bodyPaddingTop32">
+ 			<div class="inside">
+ 				<div style="height:1rem"></div>
+				<div class="fileUploadCenter">
+					<h3>记录旅行中的精彩<a href="">编辑</a></h3>
+					<div class="fileUploadBox">
+						<ul>
+							<li><a href="#"><img src="images/print2.jpg" class="img"/></a><span>三亚湾</span></li>
+							<li><a href="#"><img src="images/print3.jpg" class="img"/></a><span>三亚湾</span></li>
+							<li><a href="#"><img src="images/print4.JPG" class="img"/></a><span>三亚湾</span></li>
+							<li><a href="#"><img src="images/print5.jpg" class="img"/></a><span>三亚湾</span></li>
+							<li><a href="#"><img src="images/print6.jpg" class="img"/></a><span>三亚湾</span></li>
+							<li><a href="#"><img src="images/print_1.jpg" class="img"/></a><span>三亚湾</span></li>
+							<li class="addFile"></li><input type="file" name="picUpload" class="hiddenFileUp"/>
+							<div class="clear">
+							</div>
+						</ul>
+					</div>
+				</div>
+				<div style="height:1rem"></div>
+				<div class="bigPic">
+					<span><img src="images/print2.jpg"/></span>
+				</div>
+				<div class="bigPic">
+					<span><img src="images/print3.jpg"/></span>
+				</div>
+				<div class="bigPic">
+					<span><img src="images/print4.JPG"/></span>
+				</div>
+				<div class="bigPic">
+					<span><img src="images/print5.jpg"/></span>
+				</div>
+				<div class="bigPic">
+					<span><img src="images/print6.jpg"/></span>
+				</div>
+				<div class="bigPic">
+					<span><img src="images/print_1.jpg"/></span>
+				</div>
+  			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/fastclick.js"></script>
+		<script>
+			$(function(){
+				
+				$(".addFile").click(function(){
+					var ie = !-[1,];   
+        			if(ie){  
+            		$('input:file').trigger('click').trigger('change');  
+       				 }else{  
+           			 $('input:file').trigger('click');  
+       				 }  
+				})
+				var $foot_pics=$(".fileUploadBox ul li");
+				var $bigPics=$(".bigPic")
+				$foot_pics.click(function(){
+					var index=$(this).index();
+					$bigPics.eq(index).css("display","table").click(function(){
+						$(this).css("display","none")
+					})
+			})})
+		</script>
+	</body>
+</html>
+

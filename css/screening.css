@@ -1,0 +1,244 @@
+.scr_nav{
+	position:relative;
+	background-color: #fff;
+	width:100%;
+	height:2.7rem;
+	min-width: 300px;
+	max-width: 700px;
+	margin:0 auto;
+	/*border-bottom: 1px solid #f6f6f6;*/
+}
+.scr_nav:after{
+	position: absolute;
+	content: "";
+	height:1px;
+	width:100%;
+	bottom: 0;
+	left:0;
+	background:#dadada;
+	transform:scaleY(0.5);
+	-webkit-transform: scaleY(0.5);
+}
+.scr_nav li{
+	position: relative;
+	margin-top:0.6rem;
+	height:1.5rem;
+	line-height: 1.5rem;
+	/*border-right:1px solid #f6f6f6;*/
+	width:33.3%;
+	float:left;
+	text-align: center;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.scr_nav li:after,.travelItem .item_top .item_topLeft:after,.item_bottom .item_bottomLeft:after{
+	position: absolute;
+	content: "";
+	width:1px;
+	height:100%;
+	top: 0;
+	right:-1PX;
+	background:#dadada;
+	transform:scaleX(0.5);
+	-webkit-transform:scaleX(0.5);
+}
+.scr_nav .sorting,.scr_nav .gender{
+	background:url(../images/xiala_n.png) no-repeat 95% center;
+	background-size: 0.6rem;
+}
+
+.activeSaiXuan{
+	color:#398FFD;
+	background:url(../images/shaixuan_h.png) no-repeat 90% center!important;
+	background-size: 1.4rem!important;
+	border-right: none!important;
+}
+.scr_nav .screening{
+	background:url(../images/shaixuan_n.png) no-repeat 90% center;
+	background-size: 1.4rem;
+	border-right: none;
+}
+.body{
+	overflow: hidden;
+	
+}
+.label_color{
+	color:#398FFD;
+	background:url(../images/xiala_h.png) no-repeat 95% center!important;
+	background-size: 0.6rem!important;
+}
+
+/*******智能筛选*******/
+.hidden_sorting ul{
+	padding-bottom:0.5rem;
+	background: #f6f6f6;
+	position:relative;
+	top:-10rem;	
+}
+.sorting_selected{
+	background:url(../images/selected.png) no-repeat 5rem center;
+	background-size:1rem;
+	color:#398FFD;
+}
+/******性别筛选*******/
+.hidden_gender,.hidden_sorting,.hidden_scr{
+	display:none;
+	overflow: hidden;
+	width:100%;
+	position:fixed;
+	margin:0 auto;
+	min-width: 300px;
+	max-width: 700px;
+	top:5.9rem;
+	bottom: 0;
+	background-color: rgba(00,00,00,0.2);	
+}
+.hidden_gender ul{
+	padding-bottom:0.5rem;
+	background: #f6f6f6;
+	position:relative;
+	top:-6rem;
+}
+.hidden_gender li,.hidden_sorting li{
+	background-color: #fff;
+	border-top:1px solid #f6f6f6;
+	text-align: center;
+	line-height: 2rem;
+	height:2rem;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.gender_selected{
+	background:url(../images/selected.png) no-repeat 10rem center;
+	background-size:1rem;
+	color:#398FFD;
+}
+/**筛选遮盖层**/
+.hidden_scr{
+	/*display: none;*/
+	width:100%;
+	margin:0 auto;
+	min-width: 300px;
+	max-width: 700px;
+	position:fixed;
+	top:5.9rem;
+	bottom: 0;
+	z-index:99;
+	background-color: rgba(00,00,00,0.2);
+}
+.screening_details{
+	top:-25rem;
+	position: relative;
+	border-top: 1px solid #BDBDBD;
+	width:100%;
+	margin:0 auto;
+	min-width: 300px;
+	max-width: 700px;
+	background-color:#fff;
+	height:20rem;
+}
+.screening_details .hiddenScreeningTabs{
+	overflow: auto;
+	width:30%;
+	background-color: #D6D6D6;
+	height:100%;
+	float: left;
+}
+.screening_details .hiddenScreeningTabs > div{
+	border-bottom: 1px solid #BDBDBD;
+	height:3rem;
+	line-height: 3rem;
+	text-align: center;
+}
+.changeTabs{
+	border-bottom: 1px solid #fff!important;
+	background-color:#fff;	
+}
+.screening_details .tabs_details{
+	height:20rem;
+	float: left;
+	width:70%;	
+	margin-bottom:4rem;
+}
+.screening_details .tabs_details ul{
+	height:16rem;
+	overflow: auto;
+	display: none;
+	padding:0 1rem;
+}
+.screening_details .tabs_details ul li{
+	background:url(../images/yuan1.png) no-repeat 95% center;
+	background-size: 0.8rem;
+	padding:0 0.5rem;
+	height:3rem;
+	line-height: 3rem;
+	border-bottom: 1px solid #BDBDBD;
+}
+.changeServerDetails{
+	background:url(../images/yuan2.png) no-repeat 95% center!important;
+	background-size: 0.8rem!important;
+}
+
+.screening_details .screening_title{
+	position:absolute;
+	top:0;
+	width:20rem;
+	line-height:3rem;
+	height:3rem;
+	font-size:1.3rem;
+	text-align: center;
+	background-color:#eeeeee;
+	
+}
+.screening_title a{
+	-webkit-tap-highlight-color:transparent;
+	position:absolute;
+	background: url(../images/cancel.png) no-repeat center;
+	background-size: 50%;
+	float:left;
+	display:block;
+	width:3rem;
+	height:3rem;
+}
+.screening_bottom{
+	width:100%;
+	position:absolute;
+	bottom:0rem;
+	height:4rem;
+}
+.screening_bottom div{
+	height:4rem;
+	background-color: #fff;
+	float: left;
+	width:50%;
+	text-align: center;
+	line-height:4rem;
+	font-size: 1.3rem;
+}
+.screening_bottom div:last-child{
+	background-color: #398FFC;
+	color:#fff;
+}
+.screening_items h3{
+	text-indent:1rem;
+	font-weight: normal;
+	height:3rem;
+	line-height: 3.2rem;
+	font-size: 1.2rem;
+	background-color:#E5E5E5;
+
+}
+.screening_items ul{
+	padding:0.5rem 0 0.5rem 0.6rem;  
+}
+.last_item{
+	margin-bottom:4rem;
+}
+.screening_items li{
+	text-align: center;
+	height:2.5rem;
+	line-height:2.5rem;
+	background-color: #EEEEEE;
+	border-radius:0.5rem ;
+	margin:0.4rem;
+	width:5.5rem;
+	float: left;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>出行列表详情</title>
+		<link href="css/common.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/tourGuideDetails.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/fastclick.js"></script>
+	</head>
+
+	<body>
+		<div class="top">
+  			<div class="inside" style="background-color:rgba(57,143,252,0);">
+    			<div class="divLeftBack" onclick="pageBack()"></div>
+    			<div class="divCenter">出行订单详情</div>
+    			<div class="hidden_blue"></div>
+  			</div>
+		</div>
+		<div class="body">
+  			<div class="inside">
+  				<div class="topBj">
+  					<div class="topBjImg">
+  						<img src="images/guideTopBj.png" width="100%" height="auto" />
+  					</div>
+  					<div class="remainDate">
+  						订单进行中，还剩<strong>3</strong>天
+  					</div>
+  					<div>
+  						<div class="traOrderPlaceAndDate lf">
+  							<p>目的地<span>杭州</span>(2人)</p>
+  							<p class="orderDate">出行时间<span>05-31</span>至<span>06-03</span></p>
+  							<div>景点游</div>
+  						</div>
+  						<div class="traOrderMoney lf">
+  							<div>总服务费用</div>
+  							<div>￥360元</div>
+  						</div>
+  						<div class="clear"></div>
+  					</div>
+  				</div>
+  				<div class="traOrderMid">
+  					<h3 class="guiderTitle">行程导游</h3>
+  					<div class="divGuiderDetail">
+  						<div class="divGuiderHead"><img src="images/personal.png"/></div>
+  						<p>女巫的红苹果<img src="images/male2.png"/> <span>90后</span></p>
+  						<div class="divGuiderXb"><img src="images/tour.png"/></div>
+  						<div class="divGurderPf">服务评分<span>4.6</span></div>
+  						<div class="guiderTelNum"><a href="" class="linkPhone lf"></a><span class="lf">188-1096-8447</span><a href="" class="linkQq rf">在线沟通</a></div>
+  					</div>
+  					<div class="serverInfo">
+  						<div class="server_items">
+  							<h4>服务内容 :</h4>
+  							<p>景点讲解&nbsp;&nbsp;酒店安排&nbsp;&nbsp;包车服务</p>
+  						</div>
+  						<div class="server_items">
+  							<h4>预计景点 :</h4>
+  							<p>西湖风景区&nbsp;&nbsp;灵隐寺&nbsp;&nbsp;宋城</p>
+  						</div>
+  					</div>
+  					<div>
+  						<h3 class="viewRules">点击查看规则</h3>
+  						<ul class="hiddenRules">
+  							<li>距离出行时间大于7天可直接取消订单，并在取消后3天内全额退还订单费用。</li>
+  							<li>距离出行时间3~7天可取消订单将会扣除10%订单费用，取消后7天内全额退还剩余费用。</li>
+  							<li>距离出行时间小于3天，不可取消订单</li>
+  							<li>订单进行中不可取消订单，可提前完成订单，若提前完成，则导游提前收取服务费用。</li>
+  							<li>距离出行时间大于7天可修改出行时间，导游确认修改后的出行时间后补交增加费用即可修改成功。</li>
+  							<div class="divContactKf"><a href="">点击联系客服</a></div>
+  						</ul>
+  						
+  						
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		<div class="guider_bottom">
+  			<div class="inside">
+  				<a href="#" class="online_con">修改订单</a>
+  				<a class="vertical_line"></a>
+  				<a href="#" class="can_order">取消订单</a>
+  				<a href="tourGuideDetails_02.html" class="order_status" style="background-color:#959595;">完成订单</a>
+  			</div>
+		</div>
+  		<script>
+  			$(function(){
+  				$(".viewRules").toggle(function(){
+  					$(".hiddenRules").css("visibility","visible")
+  				},function(){
+  					$(".hiddenRules").css("visibility","hidden")
+  				})
+  			//底部首部
+  				$(window).scroll(function(){
+					var $top=$(window).scrollTop()
+					if($top>10){
+						$(".top .inside .hidden_blue").fadeIn();
+					}else{
+						$(".top .inside .hidden_blue").fadeOut();
+					}
+				})
+  			})
+  		</script>
+	</body>
+</html>

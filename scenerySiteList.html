@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>景点列表</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/screening.css" rel="stylesheet" type="text/css" />
+<link href="css/list.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<style>
+.body .inside {
+	padding-top: 2.7rem;
+}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="inside">
+    <div class="divLeftBack" onclick="pageBack()"></div>
+    <div class="divCenter">景点列表</div>
+  </div>
+  <ul class="scr_nav">
+    <li class="sorting">智能排序</li>
+    <li class="gender">景点类型</li>
+    <li class="screening">筛选</li>
+  </ul>
+</div>
+<div class="body bodyPaddingTop32">
+  <div class="inside" style="overflow: hidden;"> 
+    <!--景点地列表-->
+    <ul class="scenerySiteUl">
+      <li class="scenerySiteLi">
+        <div class="scenerySiteTop">
+        <span class="scenerySiteTopName">top</span><span class="scenerySiteTopNumber">1</span>
+        </div>
+<div class="scenerySiteLiImg">
+  <img src="images/fodder/scenery002.jpg">
+</div>
+        <div class="scenerySiteLiCont">
+          <div class="scenerySiteLiTitle"><span class="name">西湖</span><span class="level">5A景区</span></div>
+          <div class="siteEvaluateAndPrice">
+          <div class="siteEvaluateDiv"><ul><li><img src="images/xingxing_h.png"></li><li><img src="images/xingxing_h.png"></li><li><img src="images/xingxing_h.png"></li><li><img src="images/xingxing_h.png"></li><li><img src="images/xingxing_h.png"></li>
+          </ul></div>
+          <div class="sitePriceDiv sitePriceDiv1">免费</div><div class="clear"></div>
+          
+          </div>
+          <div class="sceneryEvaluationAndSupport">
+              <div class="evaluationDiv">
+                <div class="evaluationImg"> <img src="images/zixun.png"></div>
+                <div class="evaluationNumber"> 5555 </div>
+                <div class="clear"></div>
+              </div>
+              <div class="evaluationDiv">
+                <div class="evaluationImg"> <img src="images/jingdian_sc.png"></div>
+                <div class="evaluationNumber"> 5555 </div>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+        </div>
+      </li>
+      <li class="scenerySiteLi">
+        <div class="scenerySiteTop">
+        <span class="scenerySiteTopName">top</span><span class="scenerySiteTopNumber">2</span>
+        </div>
+<div class="scenerySiteLiImg">
+  <img src="images/fodder/scenery003.jpg">
+</div>
+        <div class="scenerySiteLiCont">
+          <div class="scenerySiteLiTitle"><span class="name">太湖</span><span class="level">5A景区</span></div>
+          <div class="siteEvaluateAndPrice">
+          <div class="siteEvaluateDiv"><ul><li><img src="images/xingxing_h.png"></li><li><img src="images/xingxing_h.png"></li><li><img src="images/xingxing_h.png"></li><li><img src="images/xingxing_h.png"></li><li><img src="images/xingxing_h.png"></li>
+          </ul></div>
+          <div class="sitePriceDiv sitePriceDiv2">￥30</div><div class="clear"></div>
+          
+          </div>
+          <div class="sceneryEvaluationAndSupport">
+              <div class="evaluationDiv">
+                <div class="evaluationImg"> <img src="images/zixun.png"></div>
+                <div class="evaluationNumber"> 5555 </div>
+                <div class="clear"></div>
+              </div>
+              <div class="evaluationDiv">
+                <div class="evaluationImg"> <img src="images/jingdian_sc.png"></div>
+                <div class="evaluationNumber"> 5555 </div>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+        </div>
+      </li>
+    </ul>
+    <!--筛选弹出-->
+    <div> 
+      <!--顶部筛选栏--> 
+      <!--***智能排序***-->
+      <div class="hidden_sorting scr_item">
+        <ul>
+          <li>默认排序</li>
+          <li class="sorting_selected">人气（由高到低）</li>
+          <li class="">景点级别（由高到低）</li>
+          <li class="">评分（由低到高）</li>
+        </ul>
+      </div>
+      <!--***性别筛选***-->
+      <div class="hidden_gender scr_item">
+        <ul>
+          <li class="gender_selected">不限</li>
+          <li >收费</li>
+          <li>免费</li>
+        </ul>
+      </div>
+      <!--****筛选遮罩层****-->
+      <div class="hidden_scr scr_item">
+        <div class="screening_details">
+          <div class="hiddenScreeningTabs">
+            <div class="tab_theme">主题</div>
+            <div class="tab_address">地理区域</div>
+          </div>
+          <div class="tabs_details">
+            <ul class="tabThemeDetails">
+              <li>不限</li>
+              <li>主题乐园</li>
+              <li>建筑风光</li>
+              <li>动物园</li>
+              <li style="border-bottom: none;">园林</li>
+            </ul>
+            <ul class="tabAddressDetails">
+              <li>不限</li>
+              <li>浙江</li>
+              <li>福建</li>
+              <li>江西</li>
+              <li>北京</li>
+              <li style="border-bottom: none;">上海</li>
+              <div class="clear"></div>
+            </ul>
+          </div>
+          <div class="screening_bottom">
+            <div class="clear_scr">清空筛选</div>
+            <div class="submit_scr">确定</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <script>
+			$(function(){
+				/**导航栏**/
+				var $li=$(".scr_nav li")
+				var $hideItems=$(".scr_item");
+				$li.click(function(){
+					index=$(this).index();
+					if(index==2){
+						if(!$(this).is(".activeSaiXuan")){
+							$(this).addClass("activeSaiXuan").siblings().removeClass("label_color")
+							$hideItems.eq(index).css("display","block").children().animate({top:"0"},"fast")
+							$hideItems.eq(index).siblings().css("display","none")}
+						else{
+							$(this).removeClass("activeSaiXuan")
+					    	$hideItems.eq(index).css("display","none").children().animate({top:"-20rem"},"fast")
+						}
+					}
+					else{
+						if(!$(this).is(".label_color")){
+						$(this).addClass("label_color").siblings().removeClass("label_color activeSaiXuan")
+						$hideItems.eq(index).css("display","block").children().animate({top:"0"},"fast")
+						$hideItems.eq(index).siblings().css("display","none")	
+						}else{
+							$(this).removeClass("label_color")
+					    	$hideItems.eq(index).css("display","none").children().animate({top:"-20rem"},"fast")
+							}
+						}
+				})
+				/****筛选标签**/
+				$tabs=$(".hiddenScreeningTabs > div");
+				$tabDetails=$(".tabs_details > ul");
+				$tabs.click(function(){
+					var index=$(this).index()
+					$(this).addClass("changeTabs").siblings().removeClass("changeTabs")
+					$tabDetails.eq(index).css({"display":"block"}).siblings().css({"display":"none"})
+				})
+				$li.eq(2).click(function(){
+					$tabs.eq(0).click()
+				})
+				/***服务条目选择后**/
+				$(".tabServerDetails li").toggle(function(){
+					$(this).addClass("changeServerDetails")
+				},function(){
+					$(this).removeClass("changeServerDetails")
+				})
+				/**主题、区域选择后**/
+				$(".tabThemeDetails li,.tabAddressDetails li").click(function(){
+					if($(this).is(".changeServerDetails")){
+						$(this).removeClass("changeServerDetails")
+					}else{
+						$(this).addClass("changeServerDetails").siblings().removeClass("changeServerDetails")
+					}
+				})
+					
+				/********/
+//				年龄/排序筛选
+				$(".hidden_sorting li").click(function(){
+					if(!$(this).hasClass("sorting_selected")){
+						$(this).addClass("sorting_selected").siblings().removeClass("sorting_selected")
+					}else{
+						$(this).removeClass("sorting_selected")
+					}
+				})
+				
+				$(".hidden_gender li").click(function(){
+					if(!$(this).hasClass("gender_selected")){
+						$(this).addClass("gender_selected").siblings().removeClass("gender_selected")
+					}else{
+						$(this).removeClass("gender_selected")
+					}
+				})
+			/************/
+				$(".clear_scr").click(function(){
+					$(".tabs_details li").removeClass("changeServerDetails")
+					
+				})
+				$(".submit_scr").click(function(){
+					$(".scr_item").css("display","none")
+					$(".screening").removeClass("label_color")
+				})
+			})
+		</script>
+</body>
+</html>

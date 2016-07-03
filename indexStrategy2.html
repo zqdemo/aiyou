@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>攻略</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/yxMobileSlider.js"></script>
+<script type="text/javascript">
+$(function(){
+	getInsideArr();
+	setHotAdressWidth();//设置热门景点滑动宽度
+	});
+window.onresize = function(){
+	$(".focus").remove();
+	getInsideArr();
+	setHotAdressWidth();//设置热门景点滑动宽度 
+	};
+//设置热门景点滑动宽度
+function setHotAdressWidth(){
+	var hotAddressLiWidth=$(".hotAddressLi").width();
+	var hotAddressLiLength=$(".hotAddressLi").length;
+	var hotAddressUlwidth=hotAddressLiWidth*hotAddressLiLength*1.01;
+	$(".hotAddressUl").width(hotAddressUlwidth);
+	}
+/*获取id=bodyInside的宽度值*/
+function getInsideArr(){
+	var insideWidth=$("#bodyInside").width();
+	var insideHeight=insideWidth*0.5;
+	$(".slider").yxMobileSlider({width:insideWidth,height:insideHeight,during:5000})	}
+</script>
+</head>
+<body>
+<!--/***底部导航***/-->
+<div class="bottom">
+  	<div class="inside">
+		<ul class="bottomNav">
+			<li><a href="index.html"><div><img src="images/chuxing_n.png"/></div>出行</a></li>
+			<li><a href="indexStrategy.html"><div><img src="images/gonglue_h.png"/></div>攻略</a></li>
+			<li><a href="dynamic.html"><div><img src="images/dongtai_n.png"/></div>动态</a></li>
+			<li><a href="indexMy.html"><div><img src="images/wode_n.png"/></div>我的</a></li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+</div>
+
+<div class="body" style="">
+  <div class="inside indexStrategyInside" id="bodyInside">
+    <div class="bodyTop"> <a href="#">
+      <div class="topSearchDiv">
+        <div class="topSearchImg"><img src="images/tesechuxing_ss.png"></div>
+        <div class="topSearchText">景点/游记/作者/关键词</div>
+      </div>
+      </a>
+      <div class="topSearchAddress"><img src="images/edit.png"></div>
+    </div>
+    <!--效果html开始-->
+    <div class="slider">
+      <ul>
+        <li><a href="" target="_blank"><img src="images/fodder/scenery007.jpg" alt=""></a></li>
+        <li><a href="" target="_blank"><img src="images/fodder/scenery008.jpg" alt=""></a></li>
+        <li><a href="" target="_blank"><img src="images/fodder/scenery009.jpg" alt=""></a></li>
+      </ul>
+    </div>
+    <!--快速攻略-->
+    <div class="quickStrategy marginTopBottom04">
+      <div class="quickStrategyName">
+        <div class="quickStrategyImg"><img src="images/gonglue_kdgl.png"> </div>
+        <div class="quickStrategyNameText"> 快速攻略 </div>
+      </div>
+      <div class="quickStrategyContent">
+        <ul>
+          <a href="#">
+          <li class="quickStrategyLi">地方介绍</li>
+          </a><a href="#">
+          <li class="quickStrategyLi">精品攻略</li>
+          </a><a href="#">
+          <li class="quickStrategyLi">当地导游</li>
+          </a><a href="#">
+          <li class="quickStrategyLi">必游景点</li>
+          </a><a href="#">
+          <li class="quickStrategyLi">经典行程</li>
+          </a><a href="#">
+          <li class="quickStrategyLi"></li>
+          </a>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <!--效果html结束-->
+    <!--<div class="indexFunctionAll">
+      <ul>
+        <a href="">
+        <li class="indexFunctionList">
+          <div class="img"> <img src="images/indexFunction1.png"> </div>
+          <div class="text"> 景点 </div>
+        </li>
+        </a> <a href="">
+        <li class="indexFunctionList">
+          <div class="img"> <img src="images/indexFunction1.png"> </div>
+          <div class="text"> 酒店 </div>
+        </li>
+        </a> <a href="">
+        <li class="indexFunctionList">
+          <div class="img"> <img src="images/indexFunction1.png"> </div>
+          <div class="text"> 美食 </div>
+        </li>
+        </a> <a href="">
+        <li class="indexFunctionList">
+          <div class="img"> <img src="images/indexFunction1.png"> </div>
+          <div class="text"> 交通</div>
+        </li>
+        </a>
+      </ul>
+      <div class="clear"></div>
+    </div>-->
+    <div class="indexNav">
+      <div class="indexNavTag"> </div>
+      <div class="indexNavName"> 推荐景点 </div>
+      <a href="scenerySiteList.html">
+      <div class="indexNavMore">更多&gt;&gt; </div>
+      </a> </div>
+    <div class="recommendScenery">
+      <ul class="recommendSceneryUl">
+        <li class="recommendSceneryLi"> <a href="#">
+          <div class="recommendSceneryImg"> <img src="images/fodder/scenery010.jpg"> </div>
+          <div class="recommendSceneryName"> 西湖 </div>
+          </a> </li>
+        <li class="recommendSceneryLi"> <a href="#">
+          <div class="recommendSceneryImg"> <img src="images/fodder/scenery001.jpg"> </div>
+          <div class="recommendSceneryName"> 宋城 </div>
+          </a> </li>
+        <li class="recommendSceneryLi"> <a href="#">
+          <div class="recommendSceneryImg"> <img src="images/fodder/scenery002.jpg"> </div>
+          <div class="recommendSceneryName"> 千岛湖 </div>
+          </a> </li>
+        <li class="recommendSceneryLi"> <a href="#">
+          <div class="recommendSceneryImg"> <img src="images/fodder/scenery003.jpg"> </div>
+          <div class="recommendSceneryName"> 西溪 </div>
+          </a> </li>
+        <div class="clear"></div>
+      </ul>
+    </div>
+    <div class="changeDiv"> <a href="#">
+      <div class="changeButton">
+        <div class="changeButtonImg"> <img src="images/shuaxin.png"> </div>
+        <div class="changeButtonText"> 换一批 </div>
+      </div>
+      </a> </div>
+    <div class="travelNews marginTopBottom04">
+      <div class="travelNewsDiv">
+        <div class="travelNewsDivImg"><img src="images/gonglue_zx.png"></div>
+        <div class="travelNewsNav">旅行资讯 </div>
+        <div class="travelNewsVertical"></div>
+        <a href="#">
+        <div class="travelNewsText"> 国内最适合年轻人旅行的12个地方，你都知道哪些？ </div>
+        </a>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="indexNav">
+      <div class="indexNavTag"> </div>
+      <div class="indexNavName"> 精品游记 </div>
+      <a href="notesList.html">
+      <div class="indexNavMore">更多&gt;&gt; </div>
+      </a> </div>
+    <div class="goodNotes">
+      <div class="goodNotesDiv">
+        <div class="goodNotesImg"> <img src="images/fodder/scenery004.jpg"> </div>
+        <div class="goodNotesName"> 情迷巴黎，我的巴黎浪漫之旅（法国自由15日行详细攻略） </div>
+      </div>
+      <div class="goodNotesPersonal">
+        <div class="goodNotesPerImg"> <img src="images/personal.png"> </div>
+        <div class="goodNotesPerName">小苹果小苹果小</div>
+        <div class="goodNotesPerLevel"> <img src="images/tour.png"> </div>
+        <div class="evaluationAndSupport">
+          <div class="evaluationDiv">
+            <div class="evaluationImg"> <img src="images/dongtai_pl.png"></div>
+            <div class="evaluationNumber"> 5555 </div>
+            <div class="clear"></div>
+          </div>
+          <div class="evaluationDiv">
+            <div class="evaluationImg"> <img src="images/dongtai_dz.png"></div>
+            <div class="evaluationNumber"> 5555 </div>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="indexNav">
+      <div class="indexNavTag"> </div>
+      <div class="indexNavName"> 推荐当地导游 </div>
+      <a href="#">
+      <div class="indexNavMore">更多&gt;&gt; </div>
+      </a> </div>
+    <div class="recommendTourGuide">
+      <ul class="tourGuideUl">
+        <li class="tourGuideLi">
+          <div class="tourGuideDiv">
+            <div class="tourGuidePer">
+              <div class="tourGuidePerImg"> <img src="images/personal.png"> </div>
+              <div class="tourGuideIntro">
+                <div class="tourGuideIntroName">小苹果小苹果小</div>
+                <div class="tourGuideIntroImgs">
+                  <div class="tourGuideIntroImg"> <img src="images/male2.png"> </div>
+                  <!--<div class="tourGuideIntroImg"> <img src="images/male2.png"> </div>-->
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tourGuideService"> 酒店、门票、陪同、包车、其他 </div>
+          </div>
+        </li>
+        <li class="tourGuideLi">
+          <div class="tourGuideDiv">
+            <div class="tourGuidePer">
+              <div class="tourGuidePerImg"> <img src="images/personal.png"> </div>
+              <div class="tourGuideIntro">
+                <div class="tourGuideIntroName">小苹果小苹果小</div>
+                <div class="tourGuideIntroImgs">
+                  <div class="tourGuideIntroImg"> <img src="images/male2.png"> </div>
+                  <!--<div class="tourGuideIntroImg"> <img src="images/male2.png"> </div>-->
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tourGuideService"> 酒店、门票、陪同、包车、其他 </div>
+          </div>
+        </li>
+        <li class="tourGuideLi">
+          <div class="tourGuideDiv">
+            <div class="tourGuidePer">
+              <div class="tourGuidePerImg"> <img src="images/personal.png"> </div>
+              <div class="tourGuideIntro">
+                <div class="tourGuideIntroName">小苹果小苹果小</div>
+                <div class="tourGuideIntroImgs">
+                  <div class="tourGuideIntroImg"> <img src="images/male2.png"> </div>
+                  <!--<div class="tourGuideIntroImg"> <img src="images/male2.png"> </div>-->
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tourGuideService"> 酒店、门票、陪同、包车、其他 </div>
+          </div>
+        </li>
+        <li class="tourGuideLi">
+          <div class="tourGuideDiv">
+            <div class="tourGuidePer">
+              <div class="tourGuidePerImg"> <img src="images/personal.png"> </div>
+              <div class="tourGuideIntro">
+                <div class="tourGuideIntroName">小苹果小苹果小</div>
+                <div class="tourGuideIntroImgs">
+                  <div class="tourGuideIntroImg"> <img src="images/male2.png"> </div>
+                  <!--<div class="tourGuideIntroImg"> <img src="images/male2.png"> </div>-->
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tourGuideService"> 酒店、门票、陪同、包车、其他 </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="changeDiv"> <a href="#">
+      <div class="changeButton">
+        <div class="changeButtonImg"> <img src="images/shuaxin.png"> </div>
+        <div class="changeButtonText"> 换一换 </div>
+      </div>
+      </a> </div>
+    <div class="indexNav">
+      <div class="indexNavTag"> </div>
+      <div class="indexNavName"> 周边城市 </div>
+      <a href="#">
+      <div class="indexNavMore">更多&gt;&gt; </div>
+      </a> </div>
+    <div class="strategyCity">
+      <ul class="strategyCityUl">
+        <li class="strategyCityLi"> <a href="#">
+          <div class="strategyCityDiv"> 湖州 </div>
+          </a> </li>
+        <li class="strategyCityLi"> <a href="#">
+          <div class="strategyCityDiv"> 湖州 </div>
+          </a> </li>
+        <li class="strategyCityLi"> <a href="#">
+          <div class="strategyCityDiv"> 湖州 </div>
+          </a> </li>
+        <li class="strategyCityLi"> <a href="#">
+          <div class="strategyCityDiv"> 湖州 </div>
+          </a> </li>
+        <li class="strategyCityLi"> <a href="#">
+          <div class="strategyCityDiv"> 湖州 </div>
+          </a> </li>
+        <li class="strategyCityLi"> <a href="#">
+          <div class="strategyCityDiv"> 湖州 </div>
+          </a> </li>
+        <div class="clear"></div>
+      </ul>
+    </div>
+    <div class="height40"></div>
+  </div>
+</div>
+</body>
+</html>

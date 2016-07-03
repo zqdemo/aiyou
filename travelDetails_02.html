@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>出行详情</title>
+		<link href="css/common.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/tourGuideDetails.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/fastclick.js"></script>
+	</head>
+	<body>
+		<div class="top">
+  			<div class="inside" style="background:rgba(57,143,252,0)">
+    			<div class="divLeftBack" onclick="pageBack()"></div>
+    			<div class="divCenter">出行详情</div>
+    			<div class="hidden_blue"></div>
+  			</div>
+		</div>
+		<div class="body">
+  			<div class="inside">
+  				<div class="topBj">
+  					<div class="topBjImg">
+  						<img src="images/guideTopBj.png" width="100%" height="auto" />
+  					</div>
+  					<div class="guiderName">
+  						<div class="guiderHead">
+  							<img src="images/personal.png" height="auto" width="100%"/>
+  						</div>
+  						<div class="nameGender">
+  								<div class="lf conGudName"><span class="lf">小小乐</span><p class="boy lf"><img src="images/xinbie_icon.png"/><span>23岁</span></p></div>
+  								<p class="tabShiMing">实名认证</p>
+  						</div>
+  						<div class="guiderCredit">
+  							<div>&nbsp;&nbsp;&nbsp;3</div><div>信誉等级</div>
+  						</div>
+  					</div>
+  					<div class="clear"></div>
+  				</div>
+  				<!--/****/-->
+  				<div class="travel_info">
+  					<div class="travel_site">
+  						<h4>目的地</h4>
+  						<p>杭州&nbsp;&nbsp;<a>(2人)</a></p>
+  					</div>
+  					<div class="travel_date">
+  						<h4>出行时间</h4>
+  						<p>05-31<a> 至 </a>06-03</p>
+  					</div>
+  				</div>
+  				<!--/****/-->
+  				<div class="per_label">
+  					<h3>个性标签</h3>
+  					<ul>
+  						<li>小萝莉</li>
+  						<li>御姐</li>
+  						<li>女汉子</li>
+  						<li>暖男</li>
+  					</ul>
+  					<div class="clear"></div>
+  				</div>
+  				<!--*******-->
+  				<div class="serverInfo">
+  					<h3>出行需求</h3>
+  					<div>
+  						<div class="server_items">
+  							<h4>导游要求 :</h4>
+  							<p>性别： 男&nbsp;&nbsp;年龄限制： 80后</p>
+  						</div>
+  						<div class="server_items">
+  							<h4>服务需求 :</h4>
+  							<p>景点讲解&nbsp;&nbsp;酒店安排&nbsp;&nbsp;包车服务</p>
+
+  						</div>
+  						<div class="server_items">
+  							<h4>预计景点 :</h4>
+  							<p>上海迪斯尼&nbsp;&nbsp;东方明珠塔&nbsp;&nbsp;杜莎夫人蜡像馆</p>
+  						</div>
+  					</div>
+  				</div>
+  				<!--******-->
+  				<div class="aboutGuider">
+  					<h3>备注</h3>
+  					<p>吃货一只，只希望老司机能带我吃好吃的特色小吃，玩的话主要的几个景点要有吧。</p>
+  				</div>
+  				<!--*********-->
+  				<div class="footprint traval_print">
+  					<h3>足迹</h3>
+  					<ul>
+  						<li><a href="#"><img src="images/print5.jpg" class="img"/></a><span>三亚湾</span></li>
+  						<li><a href="#"><img src="images/print6.jpg" class="img" /></a><span>大东海</span></li>
+  						<li><a href="#"><img src="images/print3.jpg" class="img" /></a><span>亚龙湾</span></li>
+  					</ul>
+  				</div>
+  				<!--********-->
+  			</div>
+		</div>
+		<div class="guider_bottom" style="display: block;">
+  			<div class="inside">
+  				<a href="#" class="online_con">在线咨询</a>
+  				<a class="vertical_line"></a>
+  				<a href="#" class="can_order">收藏</a>
+  				<a href="#" class="order_status" style="background-color:#8C8C8C;">待付款</a>
+  			</div>
+		</div>
+		<script>
+			$(function(){
+				$(window).scroll(function(){
+					var $top=$(window).scrollTop()
+					if($top>100){
+						$(".top .inside .hidden_blue").fadeIn();
+					}else{
+						$(".top .inside .hidden_blue").fadeOut();
+					}
+				})
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>个人信息</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script src="js/jsdate/mobiscroll_date.js" charset="gb2312"></script>
+<script src="js/jsdate/mobiscroll.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	//时间插件
+	var currYear = (new Date()).getFullYear();	
+	var opt={};
+	opt.date = {preset : 'date'};
+	opt.datetime = {preset : 'datetime'};
+	opt.time = {preset : 'time'};
+	opt.default = {
+		theme: 'android-ics light', //皮肤样式
+		display: 'modal', //显示方式 
+		mode: 'scroller', //日期选择模式
+		dateFormat: 'yyyy-mm-dd',
+		lang: 'zh',
+		showNow: true,
+		nowText: "今天",
+		startYear: currYear - 50, //开始年份
+		endYear: currYear + 10 //结束年份
+	};
+	$("#USER_AGE").mobiscroll($.extend(opt['date'], opt['default']));
+
+	
+	/**取消*/
+	var $close=$(".closeServerSelect")
+	$close.click(function(){
+		$(".hiddenServer").css("display","none")
+	})
+	/***/
+	
+	/*****性别更改****/
+	var $serverGender=$("#genderDiv ul li")
+	$serverGender.click(function(){
+		$("#genderText").text($(this).text())
+		$("#genderDiv").hide();
+	})
+
+});
+function showChoice(divId){
+	$("#"+divId).show();
+}
+</script>
+</head>
+<body>
+<div class="top">
+  <div class="inside">
+    <div class="divLeftBack" onclick="pageBack()"></div>
+    <div class="divCenter"> 个人信息 </div>
+  </div>
+</div>
+<div class="body bodyPaddingTop32">
+  <div class="inside">
+    <div class="informationDiv">
+      <div class="informationImgDiv">
+        <div class="informationImg"><img src="images/personal.png" /></div>
+        <div class="informationImgHandle"><a href="javascript:;">更换头像</a></div>
+      </div>
+      <div class="informationList">
+        <div class="informationName"> </div>
+        <div class="informationContent">用户ID</div>
+        <div class="clear"></div>
+      </div>
+      <div class="informationList">
+        <div class="informationName"> </div>
+        <div class="informationContent">18888888888</div>
+        <div class="clear"></div>
+      </div>
+      <div class="informationList informationListArrowsRight"> <a href="modiyfNickname.html">
+        <div class="informationName"> 昵称 </div>
+        <div class="informationContent">小小小</div>
+        <div class="clear"></div>
+        </a> </div>
+    </div>
+    <div class="informationDiv">
+      <div class="informationList informationListArrowsRight" onclick="showChoice('genderDiv')">
+        <div class="informationName">性别</div>
+        <div class="informationContent" id="genderText">男</div>
+        <div class="clear"></div>
+      </div>
+      <div class="informationList informationListArrowsRight">
+        <div class="informationName">年龄</div>
+        <div class="informationContent">18</div>
+        <div class="clear"></div>
+      </div>
+      <div class="informationList informationListArrowsRight"> <a href="identity.html">
+        <div class="informationName"> 身份信息 </div>
+        </a> <a href="identityShow.html">
+        <div class="informationContent">张三</div>
+        </a>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="informationDiv">
+      <div class="informationList informationListArrowsRight"> <a href="setPhoneNumber.html">
+        <div class="informationName">绑定手机</div>
+        </a> <a href="verifyPhoneNumber.html">
+        <div class="informationContent">158****8888</div>
+        </a>
+        <div class="clear"></div>
+      </div>
+      <div class="informationList informationListArrowsRight">
+        <div class="informationName">修改登录密码</div>
+        <div class="informationContent"></div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="informationDiv"> 
+      <div class="informationList informationListArrowsRight">
+      <a href="modiyfSignature.html">
+        <div class="informationName">个性标签</div>
+        <div class="informationContent"></div>
+        <div class="clear"></div>
+        </a> </div>
+    </div>
+     <!--/********性别筛选**********/-->
+    <div id="genderDiv" class="hideServarGender hiddenServer sameServarStyle">
+      <div>
+        <ul>
+          <li>男</li>
+          <li>女</li>
+          <li style="border: none;">保密</li>
+        </ul>
+        <a class="closeServerSelect">取消</a> </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

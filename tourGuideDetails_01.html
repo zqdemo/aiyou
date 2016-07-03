@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>导游预约</title>
+		<link href="css/common.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/tourGuideDetails.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/fastclick.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="top">
+  			<div class="inside" style="background-color:rgba(57,143,252,0);">
+    			<div class="divLeftBack" onclick="pageBack()"></div>
+    			<div class="divCenter">导游详情</div>
+    			<div class="hidden_blue"></div>
+  			</div>
+		</div>
+		<div class="body">
+  			<div class="inside">
+  				<div class="topBj">
+  					<div class="topBjImg">
+  						<img src="images/guideTopBj.png" width="100%" height="auto" />
+  					</div>
+  					<p class="server_fee">
+  						服务费<strong>120</strong>元/天
+  					</p>
+  					<div class="guiderName">
+  						<div class="guiderHead">
+  							<img src="images/personal.png" height="auto" width="100%"/>
+  						</div>
+  						<div class="nameGender">
+  							<div class="lf conGudName"><span class="lf">小小乐</span><p class="boy lf"><img src="images/xinbie_icon.png"/><span>23岁</span></p></div>
+  							<p class="tabShiMing">实名认证</p>
+  							<p class="jieDanlv">月结单：<span>225单&nbsp;&nbsp;</span>接单率：<span>88%</span></p>
+  						</div>
+  						<div class="guiderCredit">
+  							<div>&nbsp;&nbsp;&nbsp;3</div><div>信誉等级</div>
+  						</div>
+  					</div>
+  				</div>
+  				<!--/****/-->
+  				<div class="per_label">
+  					<h3>个性标签</h3>
+  					<ul style="margin-top: 0.3rem;">
+  						<li>小萝莉</li>
+  						<li>御姐</li>
+  						<li>女汉子</li>
+  						<li>暖男</li>
+  						<div class="clear"></div>
+  					</ul>
+  					<div class="clear"></div>
+  				</div>
+  				<!--************-->
+  				<div class="serverInfo">
+  					<h3>服务信息</h3>
+  					<div>
+  						<div class="jingdiany">
+  							景点游
+  						</div>
+  						<span class="personNumLim">（接待人数限制：1~4人）</span>
+  						<div class="server_items">
+  							<h4>服务城市 :</h4>
+  							<p>北京&nbsp;&nbsp;上海&nbsp;&nbsp;南京</p>
+  						</div>
+  						<div class="server_items">
+  							<h4>服务项目 :</h4>
+  							<p>景点讲解&nbsp;&nbsp;酒店安排&nbsp;&nbsp;包车服务</p>
+
+  						</div>
+  						<div class="server_items">
+  							<h4>拿手景点 :</h4>
+  							<p>上海迪斯尼&nbsp;&nbsp;东方明珠塔&nbsp;&nbsp;杜莎夫人蜡像馆</p>
+  						</div>
+  					</div>
+  				</div>
+  				<!--/****/-->
+  				<div class="aboutGuider">
+  					<h3>关于导游</h3>
+  					<p>专业摄影，10年老司机，可接送，可陪同，对景点非常熟悉</p>
+  				</div>
+  				<!--*********-->
+  				<div class="footprint">
+  					<h3>足迹</h3>
+  					<ul>
+  						<li><a href="#"><img src="images/print3.jpg" class="img"/></a><span>三亚湾</span></li>
+  						<li><a href="#"><img src="images/print4.JPG" class="img"/></a><span>大东海</span></li>
+  						<li><a href="#"><img src="images/print6.jpg" class="img"/></a><span>亚龙湾</span></li>
+  					</ul>
+  				</div>
+  				<!--********-->
+  				<div class="tourists_com">
+  					<h3>游客评价</h3>
+  					<div class="tourists_info">
+  						<img src="images/touxiang2.jpg"/><span>黑夜的太阳</span>
+  					</div>
+  					<p>
+  						导游确实是个老司机，人很好，服务很完善，照片那叫一个漂亮啊，必须好评
+  					</p>
+  					<a href="#" class="rf" style="color: #888; font-size: 0.8rem;">查看全部18条评论 &gt;&gt;</a>
+  					<div class="xingxing">
+  						<img src="images/xingxing_h.png"/>
+  						<img src="images/xingxing_h.png"/>
+  						<img src="images/xingxing_h.png"/>
+  						<img src="images/xingxing_h.png"/>
+  						<img src="images/xingxing_h.png"/>
+  					</div>
+  					<div class="clear"></div>
+  				</div>
+  			</div>
+		</div>
+		<div class="guider_bottom">
+  			<div class="inside">
+  				<a href="#" class="online_con">在线咨询</a>
+  				<a class="vertical_line"></a>
+  				<a href="#" class="can_order">收藏</a>
+  				<a href="tourGuideDetails_02.html" class="order_status" style="background-color:#FF891F;">立即预约</a>
+  			</div>
+		</div>
+		<script>
+			$(function(){
+				$(window).scroll(function(){
+					var $top=$(window).scrollTop()
+					if($top>100){
+						$(".top .inside .hidden_blue").fadeIn();
+					}else{
+						$(".top .inside .hidden_blue").fadeOut();
+					}
+				})
+			})
+		</script>
+	</body>
+</html>

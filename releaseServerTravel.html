@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>发布出行</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/releaseTravel.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+</head>
+<body>
+	<div class="top">
+  		<div class="inside">
+   			<div class="divLeftBack" onclick="pageBack()"></div>
+   			<div class="divCenter">
+    		发布出行
+    		</div>
+  		</div>
+	</div>
+	<div class="body">
+ 		<div class="inside bodyPaddingTop32">
+ 			<div style="height:2rem"></div>
+ 			<div class="traveInfoBox">
+ 				<h4>服务需求</h4>
+ 				<ul>
+ 					<li class="guiderGender"><a>导游性别<span>不限</span></a></li>
+ 					<li class="guiderAge"><a>导游年龄<span>不限</span></a></li>
+ 					<li class="guilderServsrList"><a>服务项目<span>无</span></a></li>
+ 					<li class="guiderNote"><a>备注<span>无</span></a></li>
+ 				</ul>
+ 				<div class="travelNext">
+ 					<a href="">
+ 						立即发布
+ 					</a>
+ 				</div>
+ 				<div class="travelPreview">
+ 					<a>
+ 						预览发布需求
+ 					</a>
+ 				</div>
+ 			</div>
+ 			<!--/********性别筛选**********/-->
+ 			<div class="hideServarGender hiddenServer sameServarStyle">
+ 				<div>
+ 					<ul>
+ 						<li>男</li>
+ 						<li>女</li>
+ 						<li style="border: none;">不限</li>
+ 					</ul>
+ 					<a  class="closeServerSelect">取消</a>
+ 				</div>
+ 			</div>
+ 			<!--/****************年龄筛选****************/-->
+ 			<div class="hideServarAge hiddenServer sameServarStyle">
+ 				<div>
+ 					<ul>
+ 						<li>70后</li>
+ 						<li>80后</li>
+ 						<li>90后</li>
+ 						<li style="border: none;">不限</li>
+ 					</ul>
+ 					<a  class="closeServerSelect">取消</a>
+ 				</div>
+ 			</div>
+ 			<!--/********服务筛选界面********/-->
+ 			<div class="hideServerList hiddenServer">
+ 				<div>
+ 					<h4>服务项目</h4>
+ 					<ul>
+ 						<li>景点讲解</li>
+ 						<li>酒店安排</li>
+ 						<li>票务订购</li>
+ 						<li>包车服务</li>
+ 						<li>全程陪同</li>
+ 						<li>规划行程</li>
+ 						<div class="clear"></div>
+ 					</ul>
+ 					<div class="server_submit">
+ 						<a class="closeServerSelect">取消</a>
+ 						<a class="submitServerSelect">确认</a>
+ 					</div>
+ 				</div>	
+ 			</div>
+ 			<!--/***************备注*************/-->
+ 			<div class="hideServerNote hiddenServer">
+ 				<div>
+ 					<h4>需求备注<a>确定</a></h4>
+ 					<div contenteditable="true"  class="content needsclick" style="outline: none;">请输入您的其他旅游需求（<a>50</a>字以内）</div>
+ 				</div>	
+ 			</div>
+ 			<!--/***预览页面**/-->
+ 			<div class="hideServerPreview hiddenServer">
+  			<div>
+  				<div class="previewTop">
+  					预览<span>发布如期：&nbsp;2016年6月23日</span>
+  				</div>
+  				<div class="previewMid">
+  					<div class="previewPlace lf">
+  						<h4>目的地</h4>
+  						<p>杭州<span>&nbsp; (2人)</span></p>
+  					</div>
+  					<div class="previewDate lf">
+  						<h4>出行时间</h4>
+  						<p>05-31<span> 至 </span>06-03</p>
+  					</div>
+  					<div class="clear"></div>
+  				</div>
+  				<div class="previewDemand">
+  					<h3>出行需求</h3>
+	  				<div>
+	  					<div class="server_items">
+	  						<h4>导游要求 :</h4>
+	  						<p>性别限制：<img src="images/male2.png"/>年龄限制： 80后</p>
+						</div>
+	  					<div class="server_items">
+	  						<h4>服务需求 :</h4>
+	  						<p>景点讲解&nbsp;&nbsp;酒店安排&nbsp;&nbsp;包车服务</p>
+	  					</div>
+	  					<div class="server_items">
+	  						<h4>预计景点 :</h4>
+	  						<p>上海迪斯尼&nbsp;&nbsp;东方明珠塔&nbsp;&nbsp;杜莎夫人蜡像馆</p>
+	  					</div>
+	  				</div>
+  				</div>
+  				<div class="previewNote">
+  					<h3>备注</h3>
+  					<p>吃货一只，只希望老司机能带我吃好吃的特色小吃，玩的话主要的几个景点要有吧。</p>
+  				</div>
+  				<a class="closePreview">关&nbsp;闭</a>
+  			</div>
+  			
+  		</div>
+  	</div>
+	</div>
+	<script>
+	Array.prototype.del = function(n){
+			if (n<0) return this;
+			return this.slice(0,n).concat(this.slice(n+1,this.length));
+			}
+	
+		$(function(){
+			
+			var $link=$(".traveInfoBox ul li")
+			var $hiddenServer=$(".hiddenServer")
+			$link.click(function(){
+				var index=$(this).index();
+				$hiddenServer.eq(index).css("display","block")
+			})
+			/*****年龄和性别更改****/
+			var $serverGender=$(".hideServarGender ul li")
+			$serverGender.click(function(){
+				$(".guiderGender span").text($(this).text())
+				$(".hideServarGender").css("display","none")
+			})
+			/***/
+			var $serverAge=$(".hideServarAge ul li")
+			$serverAge.click(function(){
+				$(".guiderAge span").text($(this).text())
+				$(".hideServarAge").css("display","none")
+			})
+			
+			/**取消*/
+			var $close=$(".closeServerSelect")
+			$close.click(function(){
+				$(".hiddenServer").css("display","none")
+			})
+			/***/
+	
+			/******服务项目数组******/
+			$serverLists=$(".hideServerList li");
+			var $ServerArray=[];
+			$serverLists.toggle(function(){
+				$(this).addClass("serverListSelected")
+				$ServerArray.push($(this).text());
+			},function(){
+				$(this).removeClass("serverListSelected")
+				for(var i=0;i<$ServerArray.length;i++){
+					if($ServerArray[i]==$(this).text()){
+						$ServerArray=$ServerArray.del(i);
+					}
+				}
+			})
+			$(".submitServerSelect").click(function(){
+				var $String=$ServerArray.join("、");
+				if($String==""){
+					$(".guilderServsrList span").text("无").css({"line-height":"3rem","width":"12rem","text-align":"right","font-size":"1rem"})	
+					$(".hiddenServer").css("display","none")
+				}else{
+					if($String.length>17){
+					$(".guilderServsrList span").css({"line-height":"1.5rem","width":"12rem","text-align":"left"})
+				}else{
+					$(".guilderServsrList span").css({"line-height":"3rem","width":"12rem","text-align":"right"})
+				}
+				$(".guilderServsrList span").text($String).css("font-size","0.8rem");
+				$(".hiddenServer").css("display","none")
+				}	
+			})
+			/*********/
+			/*****输入备注****/
+			$(".hideServerNote .content").focus(function(){
+				if($(".hideServerNote .content").text()=="请输入您的其他旅游需求（50字以内）"){
+					$(".hideServerNote .content").text("")
+				}
+			})
+			$(".hideServerNote h4 a").click(function(){
+
+				if($(".hideServerNote .content").text()==""||$(".hideServerNote .content").text()=="请输入您的其他旅游需求（50字以内）"){
+					$(".guiderNote span").text("无")
+				}else{
+					$(".guiderNote span").text($(".hideServerNote .content").text())
+				}
+				$(".hiddenServer").css("display","none")
+			})
+			/***预览**/
+			$(".travelPreview a").click(function(){
+				$(".body .inside").css("min-height","35rem")
+				$(".hideServerPreview").css("display","block").find(".closePreview").click(function(){
+					$(".hideServerPreview").css("display","none")
+				})
+			})
+		})
+	</script>
+</body>
+</html>

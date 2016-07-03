@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="css/common.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/releaseTravel.css" rel="stylesheet" type="text/css" />
+		<link href="css/datecss/mobiscroll.css" rel="stylesheet" />
+		<link href="css/datecss/mobiscroll_date.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/fastclick.js"></script>
+		<script src="js/jsdate/mobiscroll_date.js" charset="gb2312"></script> 
+		<script src="js/jsdate/mobiscroll.js"></script> 
+		<title>发布出行</title>
+	</head>
+	<body>
+		<div class="top">
+  			<div class="inside">
+   				<div class="divLeftBack" onclick="pageBack()"></div>
+   				<div class="divCenter">
+    			发布出行
+    			</div>
+  			</div>
+		</div>
+		<div class="body">
+ 			<div class="inside">
+ 				<div style="height:5.2rem"></div>
+ 				<div class="traveInfoBox">
+ 					<h4>出行信息</h4>
+ 					<ul>
+ 						<li><a href="#">目的地<span>上海</span></a></li>
+ 						<li><a href="#">特色、景点<span>西湖、宋城、千岛湖</span></a></li>
+ 						<li>
+ 							<div class="dateOfGo lf">
+ 								<label>出发</label>
+ 								<input type="text" name="USER_AGE" id="USER_AGE1" readonly class="input needsclick" placeholder="选择" />
+ 							</div>
+ 							<div class="travelDateNum lf">1天</div>
+ 							<div class="dateOfback rf">
+ 								<label>返回</label>
+ 								<input type="text" name="USER_AGE" id="USER_AGE2" readonly class="input needsclick" placeholder="选择" />
+ 							</div>
+ 						</li>
+ 						<li>出发人数
+ 							<div class="personCount">
+ 								<div class="person_minus lf">-</div>
+ 								<p class="person_num lf">
+ 									1
+ 								</p>
+ 								<div class="person_plus lf">+</div>
+ 							</div>
+ 						</li>
+ 					</ul>
+ 					<div class="travelNext">
+ 						<a href="releaseServerTravel.html">
+ 							下一步
+ 						</a>
+ 					</div>
+ 					<div style="height: 2rem;"></div>
+ 				</div>
+ 				
+  			</div>
+		</div>
+		<script>
+		/********加减出行人数*******/
+			$(function(){
+				var $personNum=parseInt($(".person_num").html())
+				$(".person_plus").click(function(){
+					$personNum+=1;
+					$(".person_num").html($personNum)
+				})
+				$(".person_minus").click(function(){
+					if($personNum<2){
+						alert("最少出行1人")
+					}else{
+						$personNum-=1;
+						$(".person_num").html($personNum)
+					}
+				})
+			})
+//出行日期函数
+			/*****自定义时间函数显示****/
+			var now=new Date();
+			function format(date){
+			var y=date.getFullYear()+"-";
+			var m=date.getMonth()+1+"-";
+			var d=date.getDate()+"";
+			return date=y+m+d
+			}
+			var now2=new Date();
+			function format2(date){
+			var y=date.getFullYear()+"-";
+			var m=date.getMonth()+1+"-";
+			var nextD=date.getDate()+1;
+			return date=y+m+nextD
+			}
+			$("#USER_AGE1").val(format(now))
+			$("#USER_AGE2").val(format2(now2))
+			/********移动显示选择日期时间********/
+			$(function () {
+				var currYear = (new Date()).getFullYear();	
+				var opt={};
+				opt.date = {preset : 'date'};
+				opt.datetime = {preset : 'datetime'};
+				opt.time = {preset : 'time'};
+				opt.default = {
+					theme: 'android-ics light', //皮肤样式
+					display: 'modal', //显示方式 
+					mode: 'scroller', //日期选择模式
+					dateFormat: 'yyyy-mm-dd',
+					lang: 'zh',
+					showNow: true,
+					nowText: "今天",
+					startYear: currYear, //开始年份
+					endYear: currYear + 2 //结束年份
+				};
+				$("#USER_AGE1").mobiscroll($.extend(opt['date'], opt['default']));
+				$("#USER_AGE2").mobiscroll($.extend(opt['date'], opt['default']));
+				
+				/******计算时间差并赋值******/
+				$("#USER_AGE2,#USER_AGE1").change(function(){
+					var $dateGo=$("#USER_AGE1").val()
+					var $dateBack=$("#USER_AGE2").val()
+				    var $arrDateBack=$dateBack.split("-")
+				    var $arrDateGo=$dateGo.split("-")
+				    var d1=new Date($arrDateGo[0],parseInt($arrDateGo[1])-1,$arrDateGo[2]);
+ 					var d2=new Date($arrDateBack[0],parseInt($arrDateBack[1])-1,$arrDateBack[2]);
+ 					var travel=(d2.getTime()-d1.getTime())/(1000*3600*24);
+ 					if(travel<0){
+ 						alert("请重新选择出行时间")	
+ 					}else{
+ 						$(".travelDateNum").text(travel+"天")	
+ 					}
+				})
+			});
+
+		</script>
+	</body>
+</html>

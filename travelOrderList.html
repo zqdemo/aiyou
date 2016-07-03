@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>旅行清单</title>
+		<link href="css/common.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/tourGuideDetails.css"/>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/fastclick.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="top">
+  			<div class="inside">
+   				<div class="divLeftBack" onclick="pageBack()"></div>
+   				<div class="divCenter">
+    			旅行清单
+    			</div>
+  			</div>
+		</div>
+		<div class="body bodyPaddingTop32">
+ 			<div class="inside">
+ 				<!--标签tab栏-->
+ 				<ul class="tabTraOrRec">
+ 					<li><a>我的出行</a></li>
+ 					<li><a>我的接待</a></li>
+ 					<div class="clear"></div>
+ 				</ul>
+ 				<!--我的出行内容-->
+ 				<div class="tabCon con1">
+ 					<div class="traList">
+ 						<h4>发布时间：&nbsp;2016年05月31日</h4>
+		 				<div style="position: relative;">
+		 					<div class="conTraDets">
+		 						<p>目的地<span>杭州</span><a>（2人）</a></p>
+		 						<p>出行时间<span>05-31</span>至<span>06-03</span></p>
+		 						<div class="clear"></div>
+		 					</div>
+		 					
+		 					<div class="conTreSev">
+		 						<h3 class="traSevTit">服务需求</h3>
+		 						<ul>
+		 							<li>酒店预订</li>
+		 							<li>门票购买</li>
+		 							<li>车票预订</li>
+		 							<li>全程陪同</li>
+		 							<div class="clear"></div>
+		 						</ul>	
+		 					</div>
+		 					<div class="conTrePersonNum">
+		 						接待人数<big>5</big>人
+		 					</div>
+		 				</div>
+		 				<div>
+		 					<div class="conGudItem">
+		 						<div class="lf imgGudHead"><img src="images/touxiang2.jpg"/></div>
+		 						<div class="lf conGudName"><span class="lf">小小乐</span><p class="boy lf"><img src="images/xinbie_icon.png"/><span>23岁</span></p><img src="images/renzheng_sm.png"/></div><br/>
+		 						<div class="lf conGudJdl">月结单：<span>25单</span>接单率：<span>88%</span></div>
+		 						<div class="pingfenTab">&nbsp;&nbsp;&nbsp;&nbsp;1</div>
+		 						<div class="fukuanZt zt1">待付款</div>
+		 					</div>
+		 					<div class="conGudItem">
+		 						<div class="lf imgGudHead"><img src="images/qiaoba.jpg"/></div>
+		 						<div class="lf conGudName"><span class="lf">张三疯疯了</span><p class="girl lf"><img src="images/xingb_nv.png"/><span>25岁</span></p><img src="images/renzheng_sm.png"/></div><br/>
+		 						<div class="lf conGudJdl">月结单：<span>25单</span>接单率：<span>88%</span></div>
+		 						<div class="pingfenTab" style="background: url(images/xinyu3_icon.png) no-repeat right center;background-size:1.8rem 1.5rem;">&nbsp;&nbsp;&nbsp;&nbsp;5</div>
+		 						<div class="fukuanZt zt2">待确认</div>
+		 					</div>
+		 					<div class="conGudItem hidGudItem">
+		 						<div class="lf imgGudHead"><img src="images/touxiang2.jpg"/></div>
+		 						<div class="lf conGudName"><span class="lf">小小乐</span><p class="boy lf"><img src="images/xinbie_icon.png"/><span>23岁</span></p><img src="images/renzheng_sm.png"/></div><br/>
+		 						<div class="lf conGudJdl">月结单：<span>25单</span>接单率：<span>88%</span></div>
+		 						<div class="pingfenTab">&nbsp;&nbsp;&nbsp;&nbsp;1</div>
+		 						<div class="fukuanZt zt2">待确认</div>
+		 					</div>
+		 					<div class="conGudItem hidGudItem">
+		 						<div class="lf imgGudHead"><img src="images/qiaoba.jpg"/></div>
+		 						<div class="lf conGudName"><span class="lf">张三疯疯了</span><p class="girl lf"><img src="images/xingb_nv.png"/><span>25岁</span></p><img src="images/renzheng_sm.png"/></div><br/>
+		 						<div class="lf conGudJdl">月结单：<span>25单</span>接单率：<span>88%</span></div>
+		 						<div class="pingfenTab" style="background: url(images/xinyu3_icon.png) no-repeat right center;background-size:1.8rem 1.5rem;">&nbsp;&nbsp;&nbsp;&nbsp;5</div>
+		 						<div class="fukuanZt zt1">待付款</div>
+		 					</div>
+		 					<div class="conGudItem hidGudItem">
+		 						<div class="lf imgGudHead"><img src="images/touxiang2.jpg"/></div>
+		 						<div class="lf conGudName"><span class="lf">小小乐</span><p class="boy lf"><img src="images/xinbie_icon.png"/><span>23岁</span></p><img src="images/renzheng_sm.png"/></div><br/>
+		 						<div class="lf conGudJdl">月结单：<span>25单</span>接单率：<span>88%</span></div>
+		 						<div class="pingfenTab">&nbsp;&nbsp;&nbsp;&nbsp;1</div>
+		 						<div class="fukuanZt zt1">待付款</div>
+		 					</div>
+		 					<div class="conGudItem hidGudItem">
+		 						<div class="lf imgGudHead"><img src="images/qiaoba.jpg"/></div>
+		 						<div class="lf conGudName"><span class="lf">张三疯疯了</span><p class="girl lf"><img src="images/xingb_nv.png"/><span>25岁</span></p><img src="images/renzheng_sm.png"/></div><br/>
+		 						<div class="lf conGudJdl">月结单：<span>25单</span>接单率：<span>88%</span></div>
+		 						<div class="pingfenTab" style="background: url(images/xinyu3_icon.png) no-repeat right center;background-size:1.8rem 1.5rem;">&nbsp;&nbsp;&nbsp;&nbsp;5</div>
+		 						<div class="fukuanZt zt1">待付款</div>
+		 					</div>
+		 					<div class="conGudItem hidGudItem">
+		 						<div class="lf imgGudHead"><img src="images/touxiang2.jpg"/></div>
+		 						<div class="lf conGudName"><span class="lf">小小乐</span><p class="boy lf"><img src="images/xinbie_icon.png"/><span>23岁</span></p><img src="images/renzheng_sm.png"/></div><br/>
+		 						<div class="lf conGudJdl">月结单：<span>25单</span>接单率：<span>88%</span></div>
+		 						<div class="pingfenTab">&nbsp;&nbsp;&nbsp;&nbsp;1</div>
+		 						<div class="fukuanZt zt2">待确认</div>
+		 					</div>
+		 				</div>
+		 				<h4 class="showMoreGudItem">点击查看全部5个导游信息</h4>
+ 					</div>	
+ 					<!--2部分-->
+ 					<div class="traList">
+ 						<h4>发布时间：&nbsp;2016年05月31日</h4>
+		 				<div style="position: relative;">
+		 					<div class="conTraDets">
+		 						<p>目的地<span>杭州</span><a>（2人）</a></p>
+		 						<p>出行时间<span>05-31</span>至<span>06-03</span></p>
+		 						<div class="clear"></div>
+		 					</div>
+		 					
+		 					<div class="jdSerList">
+		 						<h3 class="">杭州十大景点7日游！<span class="jingdianyou">景点游</span></h3>
+		 						<ul>
+		 							<li>西湖</li>
+		 							<li>宋城</li>
+		 							<li>灵隐寺</li>
+		 							<li>儿童乐园</li>
+		 							<li>六和塔</li>
+		 							<li>千岛湖</li>
+		 							<div class="clear"></div>
+		 						</ul>
+		 						<div class="fukuanZt zt2">待确认</div>
+		 						
+		 					</div>		
+		 				</div>
+ 					</div>	
+ 				</div>
+ 				
+ 				<!--我的接待内容-->
+ 				<div class="tabCon con2">
+ 					<div class="traList">
+ 						<h4>预约消息</h4>
+	 					<div style="position: relative;">	
+			 				<div class="conTreSev">
+			 					<h3 class="traSevTit">服务项目</h3>
+			 					<ul>
+			 						<li>酒店预订</li>
+			 						<li>门票购买</li>
+			 						<li>车票预订</li>
+			 						<li>全程陪同</li>
+			 						<div class="clear"></div>
+			 					</ul>	
+			 				</div>
+			 				<div class="conTrePersonNum">
+			 					预约人数<big>5</big>人
+			 				</div>
+			 			</div>
+			 			<div>
+			 				<div class="conGudItem">
+			 					<div class="lf imgGudHead"><img src="images/touxiang04.jpg"/></div>
+			 					<div class="lf conGudName"><span class="lf">爱吃的豚鼠</span><p class="boy lf"><img src="images/xinbie_icon.png"/><span>23岁</span></p><img src="images/renzheng_sm.png"/></div><br/>
+			 					<div class="conTraDets">
+		 							<p>目的地：&nbsp;<span>杭州</span></p>
+		 							<p><span>05-31</span>&nbsp;至&nbsp;<span>06-03</span></p>
+			 						<div class="clear"></div>
+		 						</div>
+			 					<div class="pingfenTab">&nbsp;&nbsp;&nbsp;&nbsp;1</div>
+			 					<div class="fukuanZt zt2">待付款</div>
+			 				</div>
+			 				<div class="conGudItem">
+			 					<div class="lf imgGudHead"><img src="images/qiaoba.jpg"/></div>
+			 					<div class="lf conGudName"><span class="lf">乔巴医生</span><p class="girl lf"><img src="images/xingb_nv.png"/><span>25岁</span></p><img src="images/renzheng_sm.png"/></div><br/>
+			 					<div class="conTraDets">
+		 							<p>目的地：&nbsp;<span>北京</span></p>
+		 							<p><span>06-11</span>&nbsp;至&nbsp;<span>06-15</span></p>
+			 						<div class="clear"></div>
+		 						</div>
+			 					<div class="pingfenTab" style="background: url(images/xinyu3_icon.png) no-repeat right center;background-size:1.8rem 1.5rem;">&nbsp;&nbsp;&nbsp;&nbsp;5</div>
+			 					<div class="fukuanZt zt1">待确认</div>
+			 				</div>
+			 			</div>
+			 			<h4 class="showMoreGudItem">点击查看全部5个游客信息</h4>
+ 					</div>
+ 					<!--第二部分-->
+ 					<div class="traList">
+ 						<h4>匹配游客</h4>
+	 					<div style="position: relative;">	
+			 				<div class="conTreSev">
+			 					<h3 class="traSevTit">服务项目</h3>
+			 					<ul>
+			 						<li>酒店预订</li>
+			 						<li>门票购买</li>
+			 						<li>车票预订</li>
+			 						<li>全程陪同</li>
+			 						<div class="clear"></div>
+			 					</ul>	
+			 				</div>
+			 			</div>
+			 			<!--<div>
+			 				<div class="conGudItem">
+			 					<div class="lf imgGudHead"><img src="images/touxiang04.jpg"/></div>
+			 					<div class="lf conGudName"><span class="lf">爱吃的豚鼠</span><p class="boy lf"><img src="images/xinbie_icon.png"/><span>23岁</span></p><img src="images/renzheng_sm.png"/></div><br/>
+			 					<div class="conTraDets">
+		 							<p>目的地：&nbsp;<span>杭州</span></p>
+		 							<p><span>05-31</span>&nbsp;至&nbsp;<span>06-03</span></p>
+			 						<div class="clear"></div>
+		 						</div>
+			 					<div class="pingfenTab">&nbsp;&nbsp;&nbsp;&nbsp;1</div>
+			 					<div class="fukuanZt zt2">待付款</div>
+			 				</div>
+			 				<div class="conGudItem">
+			 					<div class="lf imgGudHead"><img src="images/qiaoba.jpg"/></div>
+			 					<div class="lf conGudName"><span class="lf">乔巴医生</span><p class="girl lf"><img src="images/xingb_nv.png"/><span>25岁</span></p><img src="images/renzheng_sm.png"/></div><br/>
+			 					<div class="conTraDets">
+		 							<p>目的地：&nbsp;<span>北京</span></p>
+		 							<p><span>06-11</span>&nbsp;至&nbsp;<span>06-15</span></p>
+			 						<div class="clear"></div>
+		 						</div>
+			 					<div class="pingfenTab" style="background: url(images/xinyu3_icon.png) no-repeat right center;background-size:1.8rem 1.5rem;">&nbsp;&nbsp;&nbsp;&nbsp;5</div>
+			 					<div class="fukuanZt zt1">待确认</div>
+			 				</div>
+			 			</div>-->
+			 			<h4 class="">当前共有<span>2</span>个游客和你信息匹配，点击查看详情</h4>
+ 					</div>
+ 					<!--第三部分-->
+ 					<div class="traList">
+ 						<h4>指定游客</h4>
+	 					<div style="position: relative;">	
+			 				<div class="conTreSev">
+			 					<h3 class="traSevTit">服务项目</h3>
+			 					<ul>
+			 						<li>酒店预订</li>
+			 						<li>门票购买</li>
+			 						<li>车票预订</li>
+			 						<li>全程陪同</li>
+			 						<div class="clear"></div>
+			 					</ul>	
+			 				</div>
+			 			</div>
+			 			<!--<div>
+			 				<div class="conGudItem">
+			 					<div class="lf imgGudHead"><img src="images/touxiang04.jpg"/></div>
+			 					<div class="lf conGudName"><span class="lf">爱吃的豚鼠</span><p class="boy lf"><img src="images/xinbie_icon.png"/><span>23岁</span></p><img src="images/renzheng_sm.png"/></div><br/>
+			 					<div class="conTraDets">
+		 							<p>目的地：&nbsp;<span>杭州</span></p>
+		 							<p><span>05-31</span>&nbsp;至&nbsp;<span>06-03</span></p>
+			 						<div class="clear"></div>
+		 						</div>
+			 					<div class="pingfenTab">&nbsp;&nbsp;&nbsp;&nbsp;1</div>
+			 					<div class="fukuanZt zt2">待付款</div>
+			 				</div>
+			 				<div class="conGudItem">
+			 					<div class="lf imgGudHead"><img src="images/qiaoba.jpg"/></div>
+			 					<div class="lf conGudName"><span class="lf">乔巴医生</span><p class="girl lf"><img src="images/xingb_nv.png"/><span>25岁</span></p><img src="images/renzheng_sm.png"/></div><br/>
+			 					<div class="conTraDets">
+		 							<p>目的地：&nbsp;<span>北京</span></p>
+		 							<p><span>06-11</span>&nbsp;至&nbsp;<span>06-15</span></p>
+			 						<div class="clear"></div>
+		 						</div>
+			 					<div class="pingfenTab" style="background: url(images/xinyu3_icon.png) no-repeat right center;background-size:1.8rem 1.5rem;">&nbsp;&nbsp;&nbsp;&nbsp;5</div>
+			 					<div class="fukuanZt zt1">待确认</div>
+			 				</div>
+			 			</div>-->
+			 			<h4 class="">当前指定了<span>3</span>位游客，点击查看详情</h4>
+ 					</div>
+ 				</div>
+ 			</div>	
+ 		</div>
+ 		<script>
+ 			$(function(){
+// 				标签切换
+ 				var $li=$(".tabTraOrRec li")
+ 				var $tabCon=$(".tabCon")
+ 				$li.click(function(){
+ 					$(this).children().addClass("tabBorder").end().siblings().children().removeClass("tabBorder");
+ 					var index=$(this).index();
+ 					$tabCon.eq(index).css("display","block").siblings(".tabCon").css("display","none")
+ 				})
+ 				$li.first().click()
+// 				显示隐藏更多导游信息
+			var $hideGudItems=$(".conGudItem.hidGudItem")
+			$hideGudItems.css("display","none")
+			$(".showMoreGudItem").toggle(function(){
+				$hideGudItems.css("display","block")	
+			},function(){
+				$hideGudItems.css("display","none")
+			})
+ 			})
+ 		</script>
+	</body>
+</html>

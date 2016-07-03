@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>验证手机</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript">
+    $(function(){
+        });
+/*发送验证码倒计时 开始*/
+var countdown=10; 
+function settime(val) { 
+if (countdown == 0) { 
+val.removeAttribute("disabled");    
+val.value="发送验证码"; 
+countdown = 10;
+$(val).css({"color":"#fff","background-color":"#398ffc"}); 
+return; 
+} else { 
+val.setAttribute("disabled", true);
+$(val).css({"color":"#666","background-color":"#999"}); 
+val.value="重新发送(" + countdown + ")"; 
+countdown--; 
+} 
+setTimeout(function() { 
+settime(val) 
+},1000) 
+}
+/*发送验证码倒计时 结束*/
+
+
+</script>
+</head>
+<body>
+<div class="top">
+  <div class="inside">
+    <div class="divLeftBack" onclick="pageBack()"></div>
+    <div class="divCenter"> 验证手机 </div>
+  </div>
+</div>
+<div class="body bodyPaddingTop32" style="">
+  <div class="inside">
+    <div class="informationDiv">
+      <div class="informationList">
+        <div class="informationName">158****5555</div>
+        <div class="informationContent"></div>
+        <div class="clear"></div>
+      </div>
+      <div class="inputList">
+        <input class="inputListVerification" name="" type="text" placeholder="请输入验证码" />
+        <div class="sendButton">
+          <input class="button" name="" type="button" id="verify" value="发送验证码" onclick="settime(this)">
+        </div>
+      </div>
+    </div>
+    <div class="saveButtonDiv"><a class="saveButtonA" href="setPhoneNumber.html">下一步</a></div>
+  </div>
+</div>
+</body>
+</html>

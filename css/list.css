@@ -1,0 +1,308 @@
+@charset "utf-8";
+/* CSS Document */
+/*我的出行列表*/
+.myTravelLi{
+	position:relative;
+	margin:0.4rem 0;
+	padding:0.5rem 0.8rem;
+	background-color:#fff;
+}
+.myTravelTime{
+	margin-top:0.8rem;
+}
+.travelAddressImg{
+	margin: 0 0.2rem;
+}
+.travelAddressImg img{
+	width:1.2rem;
+	height:1.2rem;
+}
+.travelAddressCom{
+	height:1.2rem;
+	line-height:1.2rem;
+	}
+.travelAddressTitle{
+	margin: 0 0.3rem;
+	float:left;
+	}
+.travelAddressName{
+	margin: 0 0.3rem;
+	color:#f00;
+	float:left;
+	}
+.travelNumber{
+	margin: 0 0.3rem;
+	color:#999;
+	float:left;
+}
+.myTravelTypeDiv{
+	margin:0.6rem 0 0.4rem 0;
+	}
+.myTravelType{
+	display:inline-block;
+    padding: 0.2rem 1rem;
+    background-color: #398ffc;
+    color: #fff;
+    border-radius: 0.5rem;
+	font-size:0.9rem;
+}
+.myTravelStatus{
+	position:absolute;
+	top:0.6rem;
+	right:0;
+	padding:0.3rem 1rem;
+	color:#fff;
+	border-radius:0.8rem 0 0 0.8rem;
+}
+.myTravelStatus1{
+	background-color:#fd3d3a;
+}
+.myTravelStatus2{
+	background-color:#398ffc;
+}
+.myTravelStatus3{
+	background-color:#8c8c8c;
+}
+.myTravelTourGuide{
+	position:absolute;
+	top:3.3rem;
+	right:0;
+	padding:0rem 1rem;
+}
+.myTravelTourGuideImg{
+	float:right;
+	border-radius:50%;
+	overflow:hidden;
+	height:2.6rem;
+	width:2.6rem;
+	margin-right:0.1rem;
+}
+.myTravelTourGuideImg img{
+	height:2.6rem;
+	width:2.6rem;
+}
+.myTravelTourGuideIntro{
+	float:right;
+	margin-right:0.6rem;
+}
+.myTravelTourGuideIntroAll{
+}
+.myTravelTourGuideIntroText{
+	float:right;
+	color:#398ffc;
+}
+.myTravelTourGuideIntroImg{
+	float:right;
+	margin-right: 0.5rem;
+}
+.myTravelTourGuideIntroImg img{
+	width:1.2rem;
+	height:1.2rem;
+}
+/*我的接待列表*/
+.myTravelService{
+	margin-top:0.6rem;
+	padding:0 2rem;
+}
+.myTravelServiceLi{
+	float:left;
+	width:4rem;
+	font-size:0.8rem;
+}
+/*景点游列表*/
+.sceneryList{
+	margin:0.4rem 0;
+	padding:0.5rem;
+	background-color:#fff;
+	box-shadow:0 1px 2px #ccc;	
+}
+.sceneryImgBg{
+	position:relative;
+	width:100%;
+}
+.sceneryImg{
+	width:100%;
+	height:10rem;
+}
+.sceneryImg img{
+	width:100%;
+	height:10rem;
+}
+.sceneryContent{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	padding:0.3rem 0;
+	height:1.4rem;
+	line-height:1.4rem;
+	background-color:rgba(0,0,0,0.25);
+	color:#fff;
+}
+.sceneryTitle{
+	margin:0 6rem 0 0.5rem;
+	border-right:1px solid #fff;
+}
+.sceneryPrice{
+	float:right;
+	width:6rem;
+	text-align:center;}
+.sceneryTourGuide{
+	margin-top:0.5rem;
+}
+.sceneryTourGuide .picture{
+	float:left;
+	margin:0 0rem;
+	height:3rem;
+	width:3rem;
+	border-radius:50%;
+	overflow:hidden;
+}
+.sceneryTourGuide .picture img{
+	height:3rem;
+	width:3rem;
+}
+.sceneryTourGuide .content{
+	margin-left:3.6rem;
+}
+.tourGuideNames{
+	padding-top:0.3rem;
+	height:1.5rem;
+}
+.tourGuideNameText{
+	float:left;
+	color:#ff7500;
+}
+.sceneryTourGuideGender{
+	float:left;
+	width:3.4rem;
+	margin-left:0.5rem;
+	padding:0.2rem 0.2rem;
+	color:#FFF;
+	border-radius:0.3rem;
+	line-height:1;
+}
+.sceneryTourGuideGenderMan{
+	margin-top:0.1rem;
+	background-color:#398ffc;
+	background-image:url(../images/xingbie_nan.png);
+	background-position:12% 49%;
+	background-repeat:no-repeat;
+	background-size:0.7rem 0.7rem;
+}
+.sceneryTourGuideGenderWoman{
+	margin-top:0.1rem;
+	background-color:#F15CAD;
+	background-image:url(../images/xingbie_nv.png);
+	background-position:12% 49%;
+	background-repeat:no-repeat;
+	background-size:0.7rem 0.7rem;
+}
+.sceneryTourGuideAge{
+	float:right;
+	padding:0 0.2rem;
+	border-left:1px solid #fff;
+	font-size:0.8rem;
+}
+.sceneryTourGuideAttestation{
+	margin-top:0.2rem;
+	float:right;
+	width:1.1rem;
+	height:1.1rem;
+}
+.sceneryTourGuideCredit{
+	float:right;
+	width:1.4rem;
+	height:1.4rem;
+	margin-right:0.5rem;
+	}
+.sceneryTag{
+	height:1.5rem;
+	background-image:url(../images/tesechuxing_bq.png);
+	background-position:1% 50%;
+	background-repeat:no-repeat;
+	background-size:1rem 1rem;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	color:#358cf9;
+	padding-left:1.6rem;
+}
+/*景点地列表*/
+.scenerySiteLi{
+	background-color:#fff;
+	padding:0.5rem;
+	margin:0.4rem 0;
+	box-shadow:0 1px 1px #dadada;
+	position:relative;
+}
+.scenerySiteTop{
+	position:absolute;
+	right:0;
+	top:0.3rem;
+	font-size:0.8rem;
+}
+.scenerySiteTopName{
+	display:inline-block;
+	height:1rem;
+	line-height:1rem;
+	width:2rem;
+	}
+.scenerySiteTopNumber{
+	display:inline-block;
+	height:1rem;
+	line-height:1rem;
+	width:1.5rem;
+	background-color:red;
+	text-align:center;
+	color:#fff;
+}
+.scenerySiteLiImg{
+	position:absolute;
+	width:6rem;
+	height:5rem;
+}
+.scenerySiteLiImg img{
+	width:6rem;
+	height:4.5rem;
+}
+.scenerySiteLiCont{
+	margin-left:6.5rem;
+	height:4.5rem;
+	}
+.scenerySiteLiTitle .level {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    color: #999;
+}
+.siteEvaluateDiv{
+	float:left;
+	height:1.2rem;
+	}
+.siteEvaluateDiv ul{
+	position:relative;
+	top:0rem;
+}
+.siteEvaluateDiv ul li{
+	float:left;
+	line-height:0;
+	margin:0 0.08rem;
+}
+.siteEvaluateDiv ul li img{
+	width:0.8rem;
+	height:0.8rem;
+}
+.sitePriceDiv{
+	float:right;
+	font-size:0.8rem;
+}
+.sitePriceDiv2{
+	color:#f9be1a;
+}
+.siteEvaluateAndPrice{
+	height:1.2rem;
+	margin-top:0.6rem;
+}
+.sceneryEvaluationAndSupport{
+	margin-top:0.3rem;
+	margin-left:-0.3rem;
+}

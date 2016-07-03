@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>设置</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	});
+/*开关切换2*/
+function switchPointLimit(obj){
+	var switchTpye=$(obj).children(".switchTpye").val();
+	if(switchTpye==0){
+		$(obj).css("background","#02E634");
+		$(obj).children(".switchWhite").css("float","right");
+		$(obj).children(".switchTpye").val("1");
+	}else if(switchTpye==1){
+		$(obj).css("background","#ddd");
+		$(obj).children(".switchWhite").css("float","left");
+		$(obj).children(".switchTpye").val("0");
+	}
+}
+</script>
+</head>
+<body>
+<div class="top">
+  <div class="inside">
+    <div class="divLeftBack" onclick="pageBack()"></div>
+    <div class="divCenter"> 设置 </div>
+  </div>
+</div>
+<div class="body bodyPaddingTop32">
+  <div class="inside">
+    <div class="informationDiv">
+      <div class="informationList">
+        <div class="informationName">自动升级</div>
+        <a href="javascript:;">
+        <div class="switch" id="switch" onclick="switchPointLimit(this)" style="">
+          <div class="switchWhite" style="float:right;"></div>
+          <input class="switchTpye" name="" type="text" value="1" style="display:none;">
+        </div>
+        </a>
+        <div class="clear"></div>
+      </div>
+      <div class="informationList">
+        <div class="informationName">消息推送</div>
+        <a href="javascript:;">
+        <div class="switch" id="switch" onclick="switchPointLimit(this)" style="">
+          <div class="switchWhite" style="float:right;"></div>
+          <input class="switchTpye" name="" type="text" value="1" style="display:none;">
+        </div>
+        </a>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="informationDiv">
+      <div class="informationList informationListArrowsRight">
+        <div class="informationName">关于</div>
+        <div class="informationContent"></div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

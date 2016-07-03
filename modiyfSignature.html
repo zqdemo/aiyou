@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>我的标签</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript">
+$(function(){
+	//点击热门添加
+	$(".hotLabelLi").click(function(){
+		var hotLabelLi=$(this).html();
+		//判断是否已经添加了该标签
+		var myLabelLiArr=$(".myLabelLi");
+		for(var i=0;i<myLabelLiArr.length;i++){
+		  var myLabelLi= myLabelLiArr.eq(i).html();
+		 if(myLabelLi==hotLabelLi){
+			return;
+		  }
+		}
+	   	$(this).removeClass("hotLabelLi2").addClass("hotLabelLi1");
+		var hotLabelLiHtml = $(this).html();
+		var signatureLi='<li class="myLabelLi" onClick="removeMyLabelLi(this)">'+hotLabelLiHtml+'</li>'
+		$("#myLabelUl").append(signatureLi);			
+});
+
+});
+//点击我的标签删除
+function removeMyLabelLi(ob){
+	$(ob).remove();
+	var myLabelLi=$(ob).html();
+	//判断是否存在该热门标签
+	var hotLabelLiArr=$(".hotLabelLi");	
+	for(var i=0;i<hotLabelLiArr.length;i++){
+		var hotLabelLi= hotLabelLiArr.eq(i).html();
+		if(myLabelLi==hotLabelLi){
+		hotLabelLiArr.eq(i).removeClass("hotLabelLi1").addClass("hotLabelLi2");
+		return;
+	  }
+   }
+}
+//添加标签
+function addSignature(){
+	var signatureText=$("#signatureText").val();
+	//判断是否存在标签
+	var myLabelLiArr=$(".myLabelLi");
+		for(var i=0;i<myLabelLiArr.length;i++){
+		  var myLabelLi= myLabelLiArr.eq(i).html();
+		 if(myLabelLi==signatureText){
+			 alert("已经添加该标签")
+			return;
+		  }
+	}
+	if(signatureText==""||signatureText=="null"){
+		alert("请输入标签内容")
+	}else{
+		var signatureLi='<li class="myLabelLi" onClick="removeMyLabelLi(this)">'+signatureText+'</li>'
+		$("#myLabelUl").append(signatureLi);
+		$("#signatureText").val("");
+	}
+	//判断是否存在该热门标签
+	var hotLabelLiArr=$(".hotLabelLi");	
+	for(var i=0;i<hotLabelLiArr.length;i++){
+		var hotLabelLi= hotLabelLiArr.eq(i).html();
+		if(signatureText==hotLabelLi){
+		hotLabelLiArr.eq(i).removeClass("hotLabelLi2").addClass("hotLabelLi1");
+		return;
+	  }
+   }
+   
+}
+</script>
+</head>
+<body>
+<div class="top">
+  <div class="inside">
+    <div class="divLeftBack" onclick="pageBack()"></div>
+    <div class="divCenter"> 我的标签 </div>
+  </div>
+</div>
+<div class="body bodyPaddingTop32">
+  <div class="inside">
+    <div class="informationDiv">
+      <div class="inputList">
+        <input id="signatureText" class="inputListInput" name="" type="text" placeholder="请输入个性签名（5个字以内）" maxlength="5" />
+        <div class="informationAddDiv" onClick="addSignature()"> <img src="images/biaoqian_tj.png"> </div>
+      </div>
+      <div class="myLabel"> 
+        <!--<div class="myLabelTitle">
+        
+        </div>-->
+        <div class="myLabelCont">
+          <ul id="myLabelUl">
+            <li class="myLabelLi" onClick="removeMyLabelLi(this)">摄影师</li>
+            <li class="myLabelLi" onClick="removeMyLabelLi(this)">文艺青年</li>
+            <li class="myLabelLi" onClick="removeMyLabelLi(this)">美丽动人</li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="hotLabel">
+        <div class="hotLabelTitle"> 热门标签 </div>
+        <div class="hotLabelCont">
+          <ul>
+            <li class="hotLabelLi hotLabelLi2">旅游达人</li>
+            <li class="hotLabelLi hotLabelLi2">成熟大叔</li>
+            <li class="hotLabelLi hotLabelLi2">职业导游</li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div class="saveButtonDiv"><a class="saveButtonA" href="javascript:;">保存标签</a></div>
+  </div>
+</div>
+</body>
+</html>

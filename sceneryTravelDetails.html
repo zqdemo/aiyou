@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>景点旅游详情</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/tourGuideDetails.css" rel="stylesheet" type="text/css" />
+<link href="css/sceneryDetails.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script>
+$(function(){
+	sceneryDayUlWidth();//设置热门景点滑动宽度
+	//旅游天切换
+	$(".sceneryDayLi").click(function(){
+		var sceneryDayLiArr =$(this);
+		var sceneryDayContentLiArr =$(".sceneryDayContentLi");
+		$(".sceneryDayLi").css({"background":"","color":"#358ffc"});//导航全部恢复
+		$(this).css({"background":"#358ffc","color":"#fff"});
+		sceneryDayContentLiArr.hide();
+		var i=sceneryDayLiArr.index();
+		sceneryDayContentLiArr.eq(i).show();
+	}); 
+});
+
+window.onresize = function(){
+	sceneryDayUlWidth();//设置热门景点滑动宽度
+};
+
+//设置热门景点滑动宽度
+function sceneryDayUlWidth(){
+	var sceneryDayLiWidth=$(".sceneryDayLi").width();
+	var sceneryDayLiLength=$(".sceneryDayLi").length;
+	var sceneryDayUlWidth=sceneryDayLiWidth*sceneryDayLiLength*1.01;
+	$(".sceneryDayUl").width(sceneryDayUlWidth);
+	}
+
+</script>
+<style>
+@media screen and (max-width: 320px) {
+.guiderName {
+	height: 4.8rem!important;
+}
+.jieDanlv {
+	top: 3.3rem!important;
+	left: 5rem!important;
+}
+}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="inside" style="background-color:rgba(57,143,252,0);">
+    <div class="divLeftBack" onclick="pageBack()"></div>
+    <div class="divCenter">景点旅游详情</div>
+    <div class="hidden_blue"></div>
+  </div>
+</div>
+<div class="body">
+  <div class="inside">
+    <div class="topBj">
+      <div class="topBjImg"> <img src="images/guideTopBj.png" width="100%" height="auto" /> </div>
+      <div class="sceneryBgCon">
+        <div class="sceneryBgConTitle"> 杭州十大景点7日游 </div>
+        <ul class="sceneryBgConUl">
+          <li class="sceneryBgConLi">景点游</li>
+          <li class="sceneryBgConLi sceneryBgConLiBorder">杭州</li>
+          <li class="sceneryBgConLi">7天</li>
+        </ul>
+      </div>
+      <p class="server_fee"> <strong>￥688.00</strong> </p>
+      <div class="guiderName">
+        <div class="sceneryImgGudGed"> <img src="images/personal.png" height="auto" width="100%"/> </div>
+        <div class="nameGender nameGenderScenery"> 小马同学
+          <p class="imgGudGed"><img src="images/xinbie_icon.png"/><span>22岁</span></p>
+          <p class="tabShiMing">实名认证</p>
+          <p class="jieDanlv">月结单：<span>225单&nbsp;&nbsp;</span>接单率：<span>88%</span></p>
+        </div>
+        <div class="guiderCredit guiderCreditScenery">
+          <div>&nbsp;&nbsp;&nbsp;3</div>
+          <div>信誉等级</div>
+        </div>
+      </div>
+    </div>
+    <!--行程规划-->
+    <div class="sceneryNav sceneryNavPlan"> 行程规划 </div>
+    <div class="sceneryDays">
+      <ul class="sceneryDayUl">
+        <li class="sceneryDayLi" style="color:#fff;background-color:#358ffc;">1<br>
+          DAY</li>
+        <li class="sceneryDayLi">2<br>
+          DAY</li>
+        <li class="sceneryDayLi">3<br>
+          DAY</li>
+        <li class="sceneryDayLi">4<br>
+          DAY</li>
+        <li class="sceneryDayLi">5<br>
+          DAY</li>
+        <li class="sceneryDayLi">6<br>
+          DAY</li>
+        <li class="sceneryDayLi">7<br>
+          DAY</li>
+        <div class="clear"></div>
+      </ul>
+    </div>
+    <ul class="sceneryDayContentUl">
+      <li class="sceneryDayContentLi">
+        <div class="sceneryMain borderBottomDa">
+          <div class="sceneryMainTime">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_time.png"> </div>
+            <div class="sceneryMainTimeText">上午</div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryImgContent">
+            <div class="sceneryImgLeft"><img src="images/fodder/scenery001.jpg" ></div>
+            <div class="sceneryContent">
+              <div class="sceneryContentTitle"> <span class="name">西湖</span><span class="level">5A景区</span> </div>
+              <div class="sceneryContentService">
+                <div class="icon"><img class="icon" src="images/fuwu_icon.png"></div>
+                <div class="name">服务项目</div>
+                <div class="clear"></div>
+              </div>
+              <div class="sceneryContentServiceCon">
+                <ul class="sceneryContentServiceConUl">
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                </ul>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainTag"> 备注：西湖周边景点也可以带你游览详解，灵隐寺需要自行购买门票。 </div>
+        </div>
+        <div class="sceneryMain borderBottomDa">
+          <div class="sceneryMainTime">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_time.png"> </div>
+            <div class="sceneryMainTimeText"> 下午 </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryImgContent">
+            <div class="sceneryImgLeft"><img src="images/print6.jpg" ></div>
+            <div class="sceneryContent">
+              <div class="sceneryContentTitle"> <span class="name">西湖</span><span class="level">5A景区</span> </div>
+              <div class="sceneryContentService">
+                <div class="icon"><img class="icon" src="images/fuwu_icon.png"></div>
+                <div class="name">服务项目</div>
+                <div class="clear"></div>
+              </div>
+              <div class="sceneryContentServiceCon">
+                <ul class="sceneryContentServiceConUl">
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                </ul>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainTag"> 备注：西湖周边景点也可以带你游览详解，灵隐寺需要自行购买门票。 </div>
+        </div>
+        <div class="sceneryMain">
+          <div class="sceneryMainTime ">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_day.png"> </div>
+            <div class="sceneryMainTimeText"> 全天明细</div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainText">行程包含：途中一天用车，全天包车不超过100公里，包车时间不超过9小时。</div>
+        </div>
+        <div class="sceneryMain">
+          <div class="sceneryMainTime ">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_bz.png"> </div>
+            <div class="sceneryMainTimeText"> 额外说明 </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainText">行程包含：途中一天用车，全天包车不超过100公里，包车时间不超过9小时。</div>
+        </div>
+      </li>
+      <li class="sceneryDayContentLi" style="display:none;">
+        <div class="sceneryMain borderBottomDa">
+          <div class="sceneryMainTime">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_time.png"> </div>
+            <div class="sceneryMainTimeText">上午</div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryImgContent">
+            <div class="sceneryImgLeft"><img src="images/fodder/scenery002.jpg" ></div>
+            <div class="sceneryContent">
+              <div class="sceneryContentTitle"> <span class="name">湘湖</span><span class="level">5A景区</span> </div>
+              <div class="sceneryContentService">
+                <div class="icon"><img class="icon" src="images/fuwu_icon.png"></div>
+                <div class="name">服务项目</div>
+                <div class="clear"></div>
+              </div>
+              <div class="sceneryContentServiceCon">
+                <ul class="sceneryContentServiceConUl">
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                </ul>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainTag"> 备注：西湖周边景点也可以带你游览详解，灵隐寺需要自行购买门票。 </div>
+        </div>
+        <div class="sceneryMain borderBottomDa">
+          <div class="sceneryMainTime">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_time.png"> </div>
+            <div class="sceneryMainTimeText"> 下午 </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryImgContent">
+            <div class="sceneryImgLeft"><img src="images/fodder/scenery003.jpg" ></div>
+            <div class="sceneryContent">
+              <div class="sceneryContentTitle"> <span class="name">西湖</span><span class="level">5A景区</span> </div>
+              <div class="sceneryContentService">
+                <div class="icon"><img class="icon" src="images/fuwu_icon.png"></div>
+                <div class="name">服务项目</div>
+                <div class="clear"></div>
+              </div>
+              <div class="sceneryContentServiceCon">
+                <ul class="sceneryContentServiceConUl">
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                </ul>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainTag"> 备注：西湖周边景点也可以带你游览详解，灵隐寺需要自行购买门票。 </div>
+        </div>
+        <div class="sceneryMain">
+          <div class="sceneryMainTime ">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_day.png"> </div>
+            <div class="sceneryMainTimeText"> 全天明细</div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainText">行程包含：途中一天用车，全天包车不超过100公里，包车时间不超过9小时。</div>
+        </div>
+        <div class="sceneryMain">
+          <div class="sceneryMainTime ">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_bz.png"> </div>
+            <div class="sceneryMainTimeText"> 额外说明 </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainText">行程包含：途中一天用车，全天包车不超过100公里，包车时间不超过9小时。</div>
+        </div>
+      </li>
+      <li class="sceneryDayContentLi" style="display:none;">
+        <div class="sceneryMain borderBottomDa">
+          <div class="sceneryMainTime">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_time.png"> </div>
+            <div class="sceneryMainTimeText">上午</div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryImgContent">
+            <div class="sceneryImgLeft"><img src="images/fodder/scenery004.jpg" ></div>
+            <div class="sceneryContent">
+              <div class="sceneryContentTitle"> <span class="name">河坊街</span><span class="level">5A景区</span> </div>
+              <div class="sceneryContentService">
+                <div class="icon"><img class="icon" src="images/fuwu_icon.png"></div>
+                <div class="name">服务项目</div>
+                <div class="clear"></div>
+              </div>
+              <div class="sceneryContentServiceCon">
+                <ul class="sceneryContentServiceConUl">
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                </ul>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainTag"> 备注：西湖周边景点也可以带你游览详解，灵隐寺需要自行购买门票。 </div>
+        </div>
+        <div class="sceneryMain borderBottomDa">
+          <div class="sceneryMainTime">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_time.png"> </div>
+            <div class="sceneryMainTimeText"> 下午 </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryImgContent">
+            <div class="sceneryImgLeft"><img src="images/fodder/scenery005.jpg" ></div>
+            <div class="sceneryContent">
+              <div class="sceneryContentTitle"> <span class="name">西湖</span><span class="level">5A景区</span> </div>
+              <div class="sceneryContentService">
+                <div class="icon"><img class="icon" src="images/fuwu_icon.png"></div>
+                <div class="name">服务项目</div>
+                <div class="clear"></div>
+              </div>
+              <div class="sceneryContentServiceCon">
+                <ul class="sceneryContentServiceConUl">
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                </ul>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainTag"> 备注：西湖周边景点也可以带你游览详解，灵隐寺需要自行购买门票。 </div>
+        </div>
+        <div class="sceneryMain">
+          <div class="sceneryMainTime ">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_day.png"> </div>
+            <div class="sceneryMainTimeText"> 全天明细</div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainText">行程包含：途中一天用车，全天包车不超过100公里，包车时间不超过9小时。</div>
+        </div>
+        <div class="sceneryMain">
+          <div class="sceneryMainTime ">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_bz.png"> </div>
+            <div class="sceneryMainTimeText"> 额外说明 </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainText">行程包含：途中一天用车，全天包车不超过100公里，包车时间不超过9小时。</div>
+        </div>
+      </li>
+      <li class="sceneryDayContentLi" style="display:none;">
+        <div class="sceneryMain borderBottomDa">
+          <div class="sceneryMainTime">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_time.png"> </div>
+            <div class="sceneryMainTimeText">上午</div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryImgContent">
+            <div class="sceneryImgLeft"><img src="images/fodder/scenery003.jpg" ></div>
+            <div class="sceneryContent">
+              <div class="sceneryContentTitle"> <span class="name">河坊街</span><span class="level">5A景区</span> </div>
+              <div class="sceneryContentService">
+                <div class="icon"><img class="icon" src="images/fuwu_icon.png"></div>
+                <div class="name">服务项目</div>
+                <div class="clear"></div>
+              </div>
+              <div class="sceneryContentServiceCon">
+                <ul class="sceneryContentServiceConUl">
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                </ul>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainTag"> 备注：西湖周边景点也可以带你游览详解，灵隐寺需要自行购买门票。 </div>
+        </div>
+        <div class="sceneryMain borderBottomDa">
+          <div class="sceneryMainTime">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_time.png"> </div>
+            <div class="sceneryMainTimeText"> 下午 </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryImgContent">
+            <div class="sceneryImgLeft"><img src="images/fodder/scenery001.jpg" ></div>
+            <div class="sceneryContent">
+              <div class="sceneryContentTitle"> <span class="name">西湖</span><span class="level">5A景区</span> </div>
+              <div class="sceneryContentService">
+                <div class="icon"><img class="icon" src="images/fuwu_icon.png"></div>
+                <div class="name">服务项目</div>
+                <div class="clear"></div>
+              </div>
+              <div class="sceneryContentServiceCon">
+                <ul class="sceneryContentServiceConUl">
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                </ul>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainTag"> 备注：西湖周边景点也可以带你游览详解，灵隐寺需要自行购买门票。 </div>
+        </div>
+        <div class="sceneryMain">
+          <div class="sceneryMainTime ">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_day.png"> </div>
+            <div class="sceneryMainTimeText"> 全天明细</div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainText">行程包含：途中一天用车，全天包车不超过100公里，包车时间不超过9小时。</div>
+        </div>
+        <div class="sceneryMain">
+          <div class="sceneryMainTime ">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_bz.png"> </div>
+            <div class="sceneryMainTimeText"> 额外说明 </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainText">行程包含：途中一天用车，全天包车不超过100公里，包车时间不超过9小时。</div>
+        </div>
+      </li>
+      <li class="sceneryDayContentLi" style="display:none;">
+        <div class="sceneryMain borderBottomDa">
+          <div class="sceneryMainTime">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_time.png"> </div>
+            <div class="sceneryMainTimeText">上午</div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryImgContent">
+            <div class="sceneryImgLeft"><img src="images/fodder/scenery006.jpg" ></div>
+            <div class="sceneryContent">
+              <div class="sceneryContentTitle"> <span class="name">河坊街</span><span class="level">5A景区</span> </div>
+              <div class="sceneryContentService">
+                <div class="icon"><img class="icon" src="images/fuwu_icon.png"></div>
+                <div class="name">服务项目</div>
+                <div class="clear"></div>
+              </div>
+              <div class="sceneryContentServiceCon">
+                <ul class="sceneryContentServiceConUl">
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                </ul>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainTag"> 备注：西湖周边景点也可以带你游览详解，灵隐寺需要自行购买门票。 </div>
+        </div>
+        <div class="sceneryMain borderBottomDa">
+          <div class="sceneryMainTime">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_time.png"> </div>
+            <div class="sceneryMainTimeText"> 下午 </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryImgContent">
+            <div class="sceneryImgLeft"><img src="images/fodder/scenery007.jpg" ></div>
+            <div class="sceneryContent">
+              <div class="sceneryContentTitle"> <span class="name">西湖</span><span class="level">5A景区</span> </div>
+              <div class="sceneryContentService">
+                <div class="icon"><img class="icon" src="images/fuwu_icon.png"></div>
+                <div class="name">服务项目</div>
+                <div class="clear"></div>
+              </div>
+              <div class="sceneryContentServiceCon">
+                <ul class="sceneryContentServiceConUl">
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                </ul>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainTag"> 备注：西湖周边景点也可以带你游览详解，灵隐寺需要自行购买门票。 </div>
+        </div>
+        <div class="sceneryMain">
+          <div class="sceneryMainTime ">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_day.png"> </div>
+            <div class="sceneryMainTimeText"> 全天明细</div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainText">行程包含：途中一天用车，全天包车不超过100公里，包车时间不超过9小时。</div>
+        </div>
+        <div class="sceneryMain">
+          <div class="sceneryMainTime ">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_bz.png"> </div>
+            <div class="sceneryMainTimeText"> 额外说明 </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainText">行程包含：途中一天用车，全天包车不超过100公里，包车时间不超过9小时。</div>
+        </div>
+      </li>
+      <li class="sceneryDayContentLi" style="display:none;">
+        <div class="sceneryMain borderBottomDa">
+          <div class="sceneryMainTime">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_time.png"> </div>
+            <div class="sceneryMainTimeText">上午</div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryImgContent">
+            <div class="sceneryImgLeft"><img src="images/fodder/scenery008.jpg" ></div>
+            <div class="sceneryContent">
+              <div class="sceneryContentTitle"> <span class="name">河坊街</span><span class="level">5A景区</span> </div>
+              <div class="sceneryContentService">
+                <div class="icon"><img class="icon" src="images/fuwu_icon.png"></div>
+                <div class="name">服务项目</div>
+                <div class="clear"></div>
+              </div>
+              <div class="sceneryContentServiceCon">
+                <ul class="sceneryContentServiceConUl">
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                </ul>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainTag"> 备注：西湖周边景点也可以带你游览详解，灵隐寺需要自行购买门票。 </div>
+        </div>
+        <div class="sceneryMain borderBottomDa">
+          <div class="sceneryMainTime">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_time.png"> </div>
+            <div class="sceneryMainTimeText"> 下午 </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryImgContent">
+            <div class="sceneryImgLeft"><img src="images/fodder/scenery009.jpg" ></div>
+            <div class="sceneryContent">
+              <div class="sceneryContentTitle"> <span class="name">西湖</span><span class="level">5A景区</span> </div>
+              <div class="sceneryContentService">
+                <div class="icon"><img class="icon" src="images/fuwu_icon.png"></div>
+                <div class="name">服务项目</div>
+                <div class="clear"></div>
+              </div>
+              <div class="sceneryContentServiceCon">
+                <ul class="sceneryContentServiceConUl">
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                </ul>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainTag"> 备注：西湖周边景点也可以带你游览详解，灵隐寺需要自行购买门票。 </div>
+        </div>
+        <div class="sceneryMain">
+          <div class="sceneryMainTime ">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_day.png"> </div>
+            <div class="sceneryMainTimeText"> 全天明细</div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainText">行程包含：途中一天用车，全天包车不超过100公里，包车时间不超过9小时。</div>
+        </div>
+        <div class="sceneryMain">
+          <div class="sceneryMainTime ">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_bz.png"> </div>
+            <div class="sceneryMainTimeText"> 额外说明 </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainText">行程包含：途中一天用车，全天包车不超过100公里，包车时间不超过9小时。</div>
+        </div>
+      </li>
+      <li class="sceneryDayContentLi" style="display:none;">
+        <div class="sceneryMain borderBottomDa">
+          <div class="sceneryMainTime">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_time.png"> </div>
+            <div class="sceneryMainTimeText">上午</div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryImgContent">
+            <div class="sceneryImgLeft"><img src="images/fodder/scenery010.jpg" ></div>
+            <div class="sceneryContent">
+              <div class="sceneryContentTitle"> <span class="name">河坊街</span><span class="level">5A景区</span> </div>
+              <div class="sceneryContentService">
+                <div class="icon"><img class="icon" src="images/fuwu_icon.png"></div>
+                <div class="name">服务项目</div>
+                <div class="clear"></div>
+              </div>
+              <div class="sceneryContentServiceCon">
+                <ul class="sceneryContentServiceConUl">
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                </ul>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainTag"> 备注：西湖周边景点也可以带你游览详解，灵隐寺需要自行购买门票。 </div>
+        </div>
+        <div class="sceneryMain borderBottomDa">
+          <div class="sceneryMainTime">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_time.png"> </div>
+            <div class="sceneryMainTimeText"> 下午 </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryImgContent">
+            <div class="sceneryImgLeft"><img src="images/fodder/scenery001.jpg" ></div>
+            <div class="sceneryContent">
+              <div class="sceneryContentTitle"> <span class="name">西湖</span><span class="level">5A景区</span> </div>
+              <div class="sceneryContentService">
+                <div class="icon"><img class="icon" src="images/fuwu_icon.png"></div>
+                <div class="name">服务项目</div>
+                <div class="clear"></div>
+              </div>
+              <div class="sceneryContentServiceCon">
+                <ul class="sceneryContentServiceConUl">
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                  <li class="sceneryContentServiceConLi">景点讲解</li>
+                </ul>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainTag"> 备注：西湖周边景点也可以带你游览详解，灵隐寺需要自行购买门票。 </div>
+        </div>
+        <div class="sceneryMain">
+          <div class="sceneryMainTime ">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_day.png"> </div>
+            <div class="sceneryMainTimeText"> 全天明细</div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainText">行程包含：途中一天用车，全天包车不超过100公里，包车时间不超过9小时。</div>
+        </div>
+        <div class="sceneryMain">
+          <div class="sceneryMainTime ">
+            <div class="sceneryMainTimeImg"><img src="images/tesechuxing_bz.png"> </div>
+            <div class="sceneryMainTimeText"> 额外说明 </div>
+            <div class="clear"></div>
+          </div>
+          <div class="sceneryMainText">行程包含：途中一天用车，全天包车不超过100公里，包车时间不超过9小时。</div>
+        </div>
+      </li>
+    </ul>
+    <!--总费用-->
+    <div class="sceneryTotalMoney">
+    
+    </div>
+  <div class="sceneryNav sceneryNavMoney"> 总费用明细 </div>
+    <div class="sceneryNavMoneyCon">
+      <div class="sceneryNavMoneyConNav">
+      费用包含
+      </div>
+      <ul class="sceneryNavMoneyUl"><li class="sceneryNavMoneyLi">车费：100</li><li class="sceneryNavMoneyLi">油费：50</li><li class="sceneryNavMoneyLi">车费：100</li><li class="sceneryNavMoneyLi">车费：100</li>
+        <div class="clear"></div>
+      </ul>
+    </div>
+    <!--********-->
+    <div class="tourists_com">
+      <h3>游客评价</h3>
+      <div class="tourists_info">
+        <div> 小马识图 </div>
+      </div>
+      <p> 导游确实是个老司机，人很好，服务很完善，照片那叫一个漂亮啊，必须好评 </p>
+      <a href="#" class="rf" style="color: #888; font-size: 0.8rem;">查看全部18条评论 &gt;&gt;</a>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<div class="guider_bottom">
+  <div class="inside"> <a href="#" class="online_con">在线咨询</a> <a class="vertical_line"></a> <a href="#" class="can_order">收藏</a> <a href="tourGuideDetails_02.html" class="order_status" style="background-color:#FD3D3A;">立即购买</a> </div>
+</div>
+<script>
+			$(function(){
+				$(window).scroll(function(){
+					var $top=$(window).scrollTop()
+					if($top>0){
+						$(".guider_bottom").fadeIn()
+					}else{
+						$(".guider_bottom").fadeOut()
+					}
+					if($top>100){
+						$(".top .inside .hidden_blue").fadeIn();
+					}else{
+						$(".top .inside .hidden_blue").fadeOut();
+					}
+				})
+			})
+		</script>
+</body>
+</html>

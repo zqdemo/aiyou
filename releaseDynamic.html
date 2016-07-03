@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>通用</title>
+		<link href="css/common.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div class="top">
+  			<div class="inside">
+   				<div class="divLeftBack" onclick="pageBack()"></div>
+   				<div class="divCenter">
+    			发布动态
+    			</div>
+  			</div>
+		</div>
+		<div class="body bodyPaddingTop32">
+ 			<div class="inside">
+ 				<div class="dynamicInput">
+ 					<textarea maxlength="200" placeholder="输入你此时的旅游状态或心情..."></textarea>
+ 					<div><a>0</a>/200</div>
+ 				</div>
+ 				<div class="dynamicAddPic">
+ 					<a style="background: url(images/dongtai_sctp.png) no-repeat left center;background-size: 1.3rem;">添加相片</a><a style="background: url(images/dongtai_zxj.png) no-repeat left center;background-size: 1.3rem;">照相机</a>
+ 				</div>
+ 				<div class="releaseSubmit">立即发布</div>
+  			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/fastclick.js"></script>
+		<script>
+		$(function(){
+			$(".dynamicInput textarea").focus(function(){
+				$(this).text("")
+			})
+		})
+	    $(document).keyup(function() {
+	        var text = $(".dynamicInput textarea").val();
+	        var counter = text.length;
+	        $(".dynamicInput a").text(counter);
+	        if(counter>199){
+	        	alert("您的字数已超出")
+	        }
+	    })
+		</script>
+	</body>
+</html>
